@@ -116,9 +116,19 @@ public class project {
     public ArrayList<timeEntry> getTimeList() {
         return timeList;
     }
-
+    public void addToTimeList(timeEntry timeEntry){
+        timeList.add(timeEntry);
+        updateTime(this);
+    }
+    public static void updateTime(project project){
+        double timeUsed = 0;
+        for (int i = 0; i < project.getTimeList().size(); i++){
+            timeUsed += project.getTimeList().get(i).getTimeUsed();
+        }
+        project.setTimeUsed(timeUsed);
+    }
     @Override
     public String toString() {
-        return "Prosjekt: " + name + ". tid brukt: " + printTimeUsed() + ". Startet " + printStartDate() + ". " + printEndDate() + "Antall logginger: " + timeList.size() + ".";
+        return "Prosjekt: '" + name + "'. Tid brukt: " + printTimeUsed() + ". Startet " + printStartDate() + ". " + printEndDate() + "Antall logginger: " + timeList.size() + ".";
     }
 }
