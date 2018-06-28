@@ -1,10 +1,10 @@
 import java.util.Date;
 
 public class timeEntry {
-    public project project;
-    public static double timeUsed;
-    public String description;
-    public Date dateAdded;
+    private project project;
+    private static double timeUsed;
+    private String description;
+    private Date dateAdded;
 
     public timeEntry(project project, double timeUsed, String description, Date dateAdded) {
         this.project = project;
@@ -22,7 +22,7 @@ public class timeEntry {
         this.project = project;
     }
 
-    public double getTimeUsed() {
+    public static double getTimeUsed() {
         return timeUsed;
     }
 
@@ -48,6 +48,6 @@ public class timeEntry {
 
     @Override
     public String toString() {
-        return project.name + ", added: " + timeUsed + ", for " + dateAdded;
+        return project.getName() + ", added: " + timeUsed + ", for " + dateAdded;
     }
 }

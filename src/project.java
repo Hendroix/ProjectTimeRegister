@@ -1,13 +1,15 @@
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Date;
 
 public class project {
-    public String name;
-    public String description;
-    public double timeUsed;
-    public Date startDate;
-    public Date endDate;
-    public ArrayList<timeEntry> timeList = new ArrayList<>();
+    private String name;
+    private String description;
+    private double timeUsed;
+    private Date startDate;
+    private Date endDate;
+    private ArrayList<timeEntry> timeList = new ArrayList<>();
 
     public project(String name, String description, Date startDate) {
         this.name = name;
@@ -38,9 +40,41 @@ public class project {
     public void setTimeUsed(double timeUsed){
         this.timeUsed = timeUsed;
     }
+    public void addTimeUsed(double timeUsed){
+        this.timeUsed += timeUsed;
+    }
+
+    public String printTimeUsed() {
+        int days = (int)timeUsed / 24;
+        double hoursLeft = timeUsed - (days * 24);
+        int hours = (int)hoursLeft;
+        double minLeft = (hoursLeft - ((int)hoursLeft)) * 60;
+        int min = (int)minLeft;
+        return "Dager: " + days + ", Timer: " + hours + ", Minutter: " + min + " TOTALT: " + String.format("%.2f",timeUsed);
+    }
 
     public Date getStartDate() {
         return startDate;
+    }
+
+    public String printStartDate(){
+        LocalDate localDate = startDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+        int year = localDate.getYear();
+        int month = localDate.getMonthValue();
+        String monthString;
+        String dayString;
+        if(month < 10){
+            monthString = "0" + month;
+        }else{
+            monthString = "" + month;
+        }
+        int day = localDate.getDayOfMonth();
+        if(day < 10){
+            dayString = "0" + day;
+        }else{
+            dayString = "" + day;
+        }
+        return dayString + "." + monthString + "." + year;
     }
 
     public void setStartDate(Date startDate) {
@@ -55,19 +89,36 @@ public class project {
         this.endDate = endDate;
     }
 
+    public String printEndDate(){
+        if(endDate != null){
+            LocalDate localDate = endDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+            int year = localDate.getYear();
+            int month = localDate.getMonthValue();
+            String monthString;
+            String dayString;
+            if(month < 10){
+                monthString = "0" + month;
+            }else{
+                monthString = "" + month;
+            }
+            int day = localDate.getDayOfMonth();
+            if(day < 10){
+                dayString = "0" + day;
+            }else{
+                dayString = "" + day;
+            }
+            return "Avsluttet " + dayString + "." + monthString + "." + year + ". ";
+        }else{
+            return "Under utvikling. ";
+        }
+    }
+
     public ArrayList<timeEntry> getTimeList() {
         return timeList;
     }
 
-    public void setTimeList(ArrayList<timeEntry> timeList) {
-        this.timeList = timeList;
-    }
-    public void addToTimeList(timeEntry timeEntry){
-        this.timeList.add(timeEntry);
-    }
-
     @Override
     public String toString() {
-        return name + ", tid brukt: " + timeUsed + ". Startet " + startDate + ". Antall logginger: " + timeList.size();
+        return "Prosjekt: " + name + ". tid brukt: " + printTimeUsed() + ". Startet " + printStartDate() + ". " + printEndDate() + "Antall logginger: " + timeList.size() + ".";
     }
 }
