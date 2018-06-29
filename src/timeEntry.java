@@ -3,19 +3,20 @@ import java.time.ZoneId;
 import java.util.Date;
 
 public class timeEntry {
+    private int entryID;
     private project project;
-    private static double timeUsed;
+    private double timeUsed;
     private String description;
     private Date dateAdded;
     private user user;
 
-    public timeEntry(project project, double timeUsed, String description, Date dateAdded, user user) {
+    public timeEntry(int entryID,project project, double timeUsed, String description, Date dateAdded, user user) {
+        this.entryID = entryID;
         this.project = project;
         this.timeUsed = timeUsed;
         this.description = description;
         this.dateAdded = dateAdded;
         this.user = user;
-        databaseConnection.addTimeEntry(this);
     }
 
     public project getProject() {
@@ -26,11 +27,11 @@ public class timeEntry {
         this.project = project;
     }
 
-    public static double getTimeUsed() {
+    public double getTimeUsed() {
         return timeUsed;
     }
 
-    public void setTimeUsed(double timeUsed) {
+    private void setTimeUsed(double timeUsed) {
         this.timeUsed = timeUsed;
     }
 
@@ -70,15 +71,45 @@ public class timeEntry {
         this.dateAdded = dateAdded;
     }
 
+    public String printDateAdded(){
+        LocalDate localDate = dateAdded.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+        int year = localDate.getYear();
+        int month = localDate.getMonthValue();
+        String monthString;
+        String dayString;
+        if(month < 10){
+            monthString = "0" + month;
+        }else{
+            monthString = "" + month;
+        }
+        int day = localDate.getDayOfMonth();
+        if(day < 10){
+            dayString = "0" + day;
+        }else{
+            dayString = "" + day;
+        }
+        String dateString = dayString + "." + monthString + "." + year;
+        return dateString;
+    }
+
     public user getUser() {
         return user;
     }
+
     public void setUser(user user) {
         this.user = user;
     }
 
+    public int getEntryID() {
+        return entryID;
+    }
+
+    private void setEntryID(int entryID) {
+        this.entryID = entryID;
+    }
+
     @Override
     public String toString() {
-        return project.getName() + ", added: " + timeUsed + ", for " + dateAdded;
+        return entryID + "|" + project.getName() + ", added: " + timeUsed + ", for " + printDateAdded() + ", By " + user.getUserName();
     }
 }

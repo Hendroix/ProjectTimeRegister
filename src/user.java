@@ -9,7 +9,6 @@ public class user {
         this.userPass = userPass;
         this.firstName = firstName;
         this.lastName = lastName;
-        databaseConnection.addUser(this);
     }
 
     public String getUserName() {
@@ -43,11 +42,17 @@ public class user {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
     public boolean checkPassword(String psw){
         if(psw == userPass){
             return true;
         }else{
             return false;
         }
+    }
+
+    @Override
+    public String toString() {
+        return userName + ": " + firstName + " " + lastName;
     }
 }

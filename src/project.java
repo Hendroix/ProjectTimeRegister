@@ -12,11 +12,12 @@ public class project {
     private ArrayList<timeEntry> timeList = new ArrayList<>();
     private ArrayList<user> userList = new ArrayList<>();
 
-    public project(String name, String description, Date startDate) {
+    public project(String name, String description, double timeUsed, Date startDate, Date endDate) {
         this.name = name;
         this.description = description;
+        this.timeUsed = timeUsed;
         this.startDate = startDate;
-        databaseConnection.addProject(this);
+        this.endDate = endDate;
     }
 
     public String getName() {
@@ -42,6 +43,7 @@ public class project {
     public void setTimeUsed(double timeUsed){
         this.timeUsed = timeUsed;
     }
+
     public void addTimeUsed(double timeUsed){
         this.timeUsed += timeUsed;
     }
@@ -134,8 +136,9 @@ public class project {
             return "2000-01-01";
         }
     }
+
     public String printEndDate(){
-        if(endDate != null){
+        if(endDate != null && endDate.after(startDate)){
             LocalDate localDate = endDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
             int year = localDate.getYear();
             int month = localDate.getMonthValue();
@@ -161,17 +164,10 @@ public class project {
     public ArrayList<timeEntry> getTimeList() {
         return timeList;
     }
+
     public void addToTimeList(timeEntry timeEntry){
         timeList.add(timeEntry);
         addUserToUserList(timeEntry.getUser());
-        updateTime(this);
-    }
-    public static void updateTime(project project){
-        double timeUsed = 0;
-        for (int i = 0; i < project.getTimeList().size(); i++){
-            timeUsed += project.getTimeList().get(i).getTimeUsed();
-        }
-        project.setTimeUsed(timeUsed);
     }
 
     public ArrayList<user> getUserList() {
