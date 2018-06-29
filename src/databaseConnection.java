@@ -31,7 +31,7 @@ public class databaseConnection {
             e.printStackTrace();
         }
     }
-    public static ArrayList<user> getAllUsers(boolean print){
+    public static void getAllUsers(boolean print){
         if(print){
             System.out.println("USERS:");
         }
@@ -56,7 +56,6 @@ public class databaseConnection {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        return null;
     }
     public static user getSpesificUser(String userName){
         try {
@@ -65,7 +64,6 @@ public class databaseConnection {
             Statement statement = connection.createStatement();
 
             String sqlStatement = "SELECT * FROM users WHERE userName ='" + userName + "'";
-            //System.out.println(sqlStatement);
             ResultSet resultSet = statement.executeQuery(sqlStatement);
             while(resultSet.next()){
                 System.out.println(resultSet.getString(1) + ", " + "####" + ", " + resultSet.getString(3)
@@ -77,6 +75,21 @@ public class databaseConnection {
             e.printStackTrace();
         }
         return null;
+    }
+    public static void deleteSpesificUser(String userName){
+        try{
+           Class.forName(DRIVER);
+           Connection connection = DriverManager.getConnection(url, username, passowrd);
+           Statement statement = connection.createStatement();
+
+           String sqlStatement = "DELETE FROM users WHERE userName ='" + userName + "'";
+           int resultSet = statement.executeUpdate(sqlStatement);
+
+        }catch (SQLException ex){
+            ex.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     //PROJECT SQL CALLS
@@ -96,7 +109,7 @@ public class databaseConnection {
             e.printStackTrace();
         }
     }
-    public static ArrayList<project> getAllProjects(boolean print){
+    public static void getAllProjects(boolean print){
         if(print){
             System.out.println("PROJECTS:");
         }
@@ -121,8 +134,6 @@ public class databaseConnection {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-
-        return null;
     }
     public static project getSpesificProject(String projectName){
         try {
@@ -143,6 +154,22 @@ public class databaseConnection {
         }
 
         return null;
+    }
+    public static void deleteSpesificProject(String projectName){
+        try{
+            Class.forName(DRIVER);
+            Connection connection = DriverManager.getConnection(url, username, passowrd);
+            Statement statement = connection.createStatement();
+
+            String sqlStatement = "DELETE FROM project WHERE userName ='" + projectName + "'";
+            int resultSet = statement.executeUpdate(sqlStatement);
+            deleteTimeEntryByProject(projectName);
+
+        }catch (SQLException ex){
+            ex.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
     public static void updateTimeInProject(String projectName){
         try{
@@ -215,7 +242,7 @@ public class databaseConnection {
             e.printStackTrace();
         }
     }
-    public static ArrayList<timeEntry> getAllTimeEntries(boolean print){
+    public static void getAllTimeEntries(boolean print){
         if(print){
             System.out.println("TIMEENTRIES:");
         }
@@ -243,9 +270,8 @@ public class databaseConnection {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        return null;
     }
-    public static ArrayList<timeEntry> getTimeEntryByUser(String userName){
+    public static void getTimeEntryByUser(String userName){
         try {
             Class.forName(DRIVER);
             Connection connection = DriverManager.getConnection(url, username, passowrd);
@@ -263,9 +289,8 @@ public class databaseConnection {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        return null;
     }
-    public static ArrayList<timeEntry> getTimeEntryByProject(String projectName){
+    public static void getTimeEntryByProject(String projectName){
         try {
             Class.forName(DRIVER);
             Connection connection = DriverManager.getConnection(url, username, passowrd);
@@ -282,7 +307,21 @@ public class databaseConnection {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        return null;
+    }
+    public static void deleteTimeEntryByProject(String projectName){
+        try{
+            Class.forName(DRIVER);
+            Connection connection = DriverManager.getConnection(url, username, passowrd);
+            Statement statement = connection.createStatement();
+
+            String sqlStatement = "DELETE FROM timeEntry WHERE userName ='" + projectName + "'";
+            int resultSet = statement.executeUpdate(sqlStatement);
+
+        }catch (SQLException ex){
+            ex.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     //Check Functions
