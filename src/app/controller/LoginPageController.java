@@ -62,6 +62,7 @@ public class LoginPageController {
             }
         }
     }
+
     private void loginMethod(){
         String inputUserName = loginPage.getTextFieldUserName().getText().replaceAll("\\s+","");
         labelUserFeedBack.setText("You tried to login as " + inputUserName);

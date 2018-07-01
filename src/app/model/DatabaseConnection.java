@@ -382,4 +382,16 @@ public class DatabaseConnection {
         }
         return false;
     }
+
+    public static ArrayList<Users> getUsersList() {
+        return USERS_LIST;
+    }
+
+    public static ArrayList<Project> getProjectList() {
+        return PROJECT_LIST;
+    }
+
+    public static ArrayList<TimeEntry> getTimeEntryList() {
+        return TIME_ENTRY_LIST;
+    }
 }

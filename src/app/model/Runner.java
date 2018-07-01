@@ -1,11 +1,18 @@
 package app.model;
 
-import app.controller.LoginPageController;
+import app.controller.SeeProjectPageController;
 
 public class Runner {
 
+    public static boolean consolePrint = false;
+
     public static void main(String[] args){
-        LoginPageController loginPageController = new LoginPageController();
-        loginPageController.showLoginPageWindow();
+
+        DatabaseConnection.getAllProjects(consolePrint);
+        DatabaseConnection.getAllUsers(consolePrint);
+        DatabaseConnection.getAllTimeEntries(consolePrint);
+
+        SeeProjectPageController seeProjectPageController = new SeeProjectPageController();
+        seeProjectPageController.showSeeProjectPageController();
     }
 }
