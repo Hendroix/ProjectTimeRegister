@@ -1,27 +1,29 @@
+package app.model;
+
 import java.sql.*;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 
-public class databaseConnection {
+public class DatabaseConnection {
     static final String DRIVER = "com.mysql.jdbc.Driver";
     static final String url = "jdbc:mysql://hupe2.mysql.domeneshop.no/hupe2";
     static final String username = "hupe2";
-    static final String passowrd = "";
+    static final String passowrd = Databasepassword.getPassword();
 
-    static final ArrayList<user> userList = new ArrayList<>();
-    static final ArrayList<project> projectList = new ArrayList<>();
-    static final ArrayList<timeEntry> timeEntryList = new ArrayList<>();
+    static final ArrayList<Users> USERS_LIST = new ArrayList<>();
+    static final ArrayList<Project> PROJECT_LIST = new ArrayList<>();
+    static final ArrayList<TimeEntry> TIME_ENTRY_LIST = new ArrayList<>();
 
     //USER SQL CALLS
-    public static void addUser(user user){
+    public static void addUser(Users Users){
         try {
             Class.forName(DRIVER);
             Connection connection = DriverManager.getConnection(url, username, passowrd);
             Statement statement = connection.createStatement();
 
-            String sqlStatement = "INSERT INTO users VALUES('" + user.getUserName() + "','" + user.getUserPass() +"','" + user.getFirstName() + "','" + user.getLastName()+ "')";
+            String sqlStatement = "INSERT INTO Users VALUES('" + Users.getUserName() + "','" + Users.getUserPass() +"','" + Users.getFirstName() + "','" + Users.getLastName()+ "')";
             //System.out.println("The Querry is:" + sqlStatement);
             statement.executeUpdate(sqlStatement);
         }
@@ -40,12 +42,12 @@ public class databaseConnection {
             Connection connection = DriverManager.getConnection(url, username, passowrd);
             Statement statement = connection.createStatement();
 
-            String sqlStatement = "SELECT * FROM users";
+            String sqlStatement = "SELECT * FROM Users";
             ResultSet resultSet = statement.executeQuery(sqlStatement);
             while(resultSet.next()){
-                user tmp = new user(resultSet.getString(1), resultSet.getString(2), resultSet.getString(3), resultSet.getString(4));
+                Users tmp = new Users(resultSet.getString(1), resultSet.getString(2), resultSet.getString(3), resultSet.getString(4));
                 if(checkIfUserInArray(tmp)){
-                userList.add(tmp);
+                USERS_LIST.add(tmp);
                 }
                 if(print){
                     System.out.println(tmp.toString());
@@ -57,7 +59,7 @@ public class databaseConnection {
             e.printStackTrace();
         }
     }
-    public static user getSpesificUser(String userName){
+    public static Users getSpesificUser(String userName){
         try {
             Class.forName(DRIVER);
             Connection connection = DriverManager.getConnection(url, username, passowrd);
@@ -93,14 +95,14 @@ public class databaseConnection {
     }
 
     //PROJECT SQL CALLS
-    public static void addProject(project project){
+    public static void addProject(Project Project){
         try{
             Class.forName(DRIVER);
             Connection connection = DriverManager.getConnection(url, username, passowrd);
             Statement statement = connection.createStatement();
 
-            String sqlStatement = "INSERT INTO project VALUES('" + project.getName() + "','" + project.getDescription() +
-                    "','" + project.getTimeUsed() + "','" + project.dbStartDate() +"','" + project.dbEndDate() + "')";
+            String sqlStatement = "INSERT INTO Project VALUES('" + Project.getName() + "','" + Project.getDescription() +
+                    "','" + Project.getTimeUsed() + "','" + Project.dbStartDate() +"','" + Project.dbEndDate() + "')";
             statement.executeUpdate(sqlStatement);
 
         }catch (SQLException ex){
@@ -118,12 +120,12 @@ public class databaseConnection {
             Connection connection = DriverManager.getConnection(url, username, passowrd);
             Statement statement = connection.createStatement();
 
-            String sqlStatement = "SELECT * FROM project";
+            String sqlStatement = "SELECT * FROM Project";
             ResultSet resultSet = statement.executeQuery(sqlStatement);
             while(resultSet.next()){
-                project tmp = new project(resultSet.getString(1), resultSet.getString(1), resultSet.getDouble(3),parseDate(resultSet.getString(4)),parseDate(resultSet.getString(5)));
+                Project tmp = new Project(resultSet.getString(1), resultSet.getString(1), resultSet.getDouble(3),parseDate(resultSet.getString(4)),parseDate(resultSet.getString(5)));
                 if(checkIfProjectInArray(tmp)){
-                    projectList.add(tmp);
+                    PROJECT_LIST.add(tmp);
                 }
                 if(print){
                     System.out.println(tmp.toString());
@@ -135,13 +137,13 @@ public class databaseConnection {
             e.printStackTrace();
         }
     }
-    public static project getSpesificProject(String projectName){
+    public static Project getSpesificProject(String projectName){
         try {
             Class.forName(DRIVER);
             Connection connection = DriverManager.getConnection(url, username, passowrd);
             Statement statement = connection.createStatement();
 
-            String sqlStatement = "SELECT * FROM project WHERE projectName = '" + projectName + "'";
+            String sqlStatement = "SELECT * FROM Project WHERE projectName = '" + projectName + "'";
             ResultSet resultSet = statement.executeQuery(sqlStatement);
             while(resultSet.next()){
                 System.out.println(resultSet.getString(1) + ", " + resultSet.getString(2) + " " + resultSet.getDouble(3)
@@ -161,7 +163,7 @@ public class databaseConnection {
             Connection connection = DriverManager.getConnection(url, username, passowrd);
             Statement statement = connection.createStatement();
 
-            String sqlStatement = "DELETE FROM project WHERE userName ='" + projectName + "'";
+            String sqlStatement = "DELETE FROM Project WHERE userName ='" + projectName + "'";
             int resultSet = statement.executeUpdate(sqlStatement);
             deleteTimeEntryByProject(projectName);
 
@@ -177,7 +179,7 @@ public class databaseConnection {
             Connection connection = DriverManager.getConnection(url, username, passowrd);
             Statement statement = connection.createStatement();
 
-            String sqlStatement = "UPDATE project set timeUsed = (SELECT SUM(timeUsed) FROM timeEntry WHERE projectName = '" + projectName + "') WHERE projectName = '" + projectName + "'";
+            String sqlStatement = "UPDATE Project set timeUsed = (SELECT SUM(timeUsed) FROM TimeEntry WHERE projectName = '" + projectName + "') WHERE projectName = '" + projectName + "'";
             statement.executeUpdate(sqlStatement);
         }catch (SQLException ex){
             ex.printStackTrace();
@@ -213,7 +215,7 @@ public class databaseConnection {
             Connection connection = DriverManager.getConnection(url, username, passowrd);
             Statement statement = connection.createStatement();
 
-            String sqlStatement = "UPDATE project set dateEnded = '" + endDateString + "') WHERE projectName = '" + projectName + "'";
+            String sqlStatement = "UPDATE Project set dateEnded = '" + endDateString + "') WHERE projectName = '" + projectName + "'";
             //System.out.println("The Querry is:" + sqlStatement);
             statement.executeUpdate(sqlStatement);
 
@@ -225,16 +227,16 @@ public class databaseConnection {
     }
 
     //TIME ENTRY SQL CALLS
-    public static void addTimeEntry(timeEntry timeEntry){
+    public static void addTimeEntry(TimeEntry TimeEntry){
         try{
             Class.forName(DRIVER);
             Connection connection = DriverManager.getConnection(url, username, passowrd);
             Statement statement = connection.createStatement();
 
-            String sqlStatement = "INSERT INTO timeEntry VALUES(" + "0" + ",'" + timeEntry.getProject().getName() +
-                    "'," + timeEntry.getTimeUsed() + ",'" + timeEntry.getDescription() +"','" + timeEntry.dbDateAdded() +"','" + timeEntry.getUser().getUserName() + "')";
+            String sqlStatement = "INSERT INTO TimeEntry VALUES(" + "0" + ",'" + TimeEntry.getProject().getName() +
+                    "'," + TimeEntry.getTimeUsed() + ",'" + TimeEntry.getDescription() +"','" + TimeEntry.dbDateAdded() +"','" + TimeEntry.getUsers().getUserName() + "')";
             statement.executeUpdate(sqlStatement);
-            updateTimeInProject(timeEntry.getProject().getName());
+            updateTimeInProject(TimeEntry.getProject().getName());
 
         }catch (SQLException ex){
             ex.printStackTrace();
@@ -251,15 +253,15 @@ public class databaseConnection {
             Connection connection = DriverManager.getConnection(url, username, passowrd);
             Statement statement = connection.createStatement();
 
-            String sqlStatement = "SELECT * FROM timeEntry";
+            String sqlStatement = "SELECT * FROM TimeEntry";
             ResultSet resultSet = statement.executeQuery(sqlStatement);
             while(resultSet.next()){
-                timeEntry tmp = new timeEntry(resultSet.getInt(1),findProject(resultSet.getString(2)),
+                TimeEntry tmp = new TimeEntry(resultSet.getInt(1),findProject(resultSet.getString(2)),
                     resultSet.getDouble(3),resultSet.getString(4),parseDate(resultSet.getString(5)),findUser(resultSet.getString(6)));
                 if(checkIfTimeEntryInArray(tmp)){
-                    timeEntryList.add(tmp);
+                    TIME_ENTRY_LIST.add(tmp);
                     tmp.getProject().addToTimeList(tmp);
-                    tmp.getProject().addUserToUserList(tmp.getUser());
+                    tmp.getProject().addUserToUserList(tmp.getUsers());
                 }
                 if(print){
                     System.out.println(tmp.toString());
@@ -277,7 +279,7 @@ public class databaseConnection {
             Connection connection = DriverManager.getConnection(url, username, passowrd);
             Statement statement = connection.createStatement();
 
-            String sqlStatement = "SELECT * FROM timeEntry WHERE userName ='" + userName + "'";
+            String sqlStatement = "SELECT * FROM TimeEntry WHERE userName ='" + userName + "'";
             //System.out.println(sqlStatement);
             ResultSet resultSet = statement.executeQuery(sqlStatement);
             while(resultSet.next()){
@@ -296,7 +298,7 @@ public class databaseConnection {
             Connection connection = DriverManager.getConnection(url, username, passowrd);
             Statement statement = connection.createStatement();
 
-            String sqlStatement = "SELECT * FROM timeEntry WHERE projectName ='" + projectName + "'";
+            String sqlStatement = "SELECT * FROM TimeEntry WHERE projectName ='" + projectName + "'";
             ResultSet resultSet = statement.executeQuery(sqlStatement);
             while(resultSet.next()){
                 System.out.println(resultSet.getInt(1) + ", " + resultSet.getString(2) + ", " + resultSet.getDouble(3)
@@ -314,7 +316,7 @@ public class databaseConnection {
             Connection connection = DriverManager.getConnection(url, username, passowrd);
             Statement statement = connection.createStatement();
 
-            String sqlStatement = "DELETE FROM timeEntry WHERE userName ='" + projectName + "'";
+            String sqlStatement = "DELETE FROM TimeEntry WHERE userName ='" + projectName + "'";
             int resultSet = statement.executeUpdate(sqlStatement);
 
         }catch (SQLException ex){
@@ -325,25 +327,25 @@ public class databaseConnection {
     }
 
     //Check Functions
-    private static boolean checkIfUserInArray(user user){
-        for(int i = 0; i < userList.size(); i++){
-            if(user.getUserName().equals(userList.get(i).getUserName())){
+    public static boolean checkIfUserInArray(Users Users){
+        for(int i = 0; i < USERS_LIST.size(); i++){
+            if(Users.getUserName().equals(USERS_LIST.get(i).getUserName())){
                 return false;
             }
         }
         return true;
     }
-    private static boolean checkIfProjectInArray(project project){
-        for(int i = 0; i < projectList.size(); i++){
-            if(project.getName().equals(projectList.get(i).getName())){
+    public static boolean checkIfProjectInArray(Project Project){
+        for(int i = 0; i < PROJECT_LIST.size(); i++){
+            if(Project.getName().equals(PROJECT_LIST.get(i).getName())){
                 return false;
             }
         }
         return true;
     }
-    private static boolean checkIfTimeEntryInArray(timeEntry timeEntry){
-        for (int i = 0; i < timeEntryList.size(); i++){
-            if((timeEntry.getEntryID()) == (timeEntryList.get(i).getEntryID())){
+    public static boolean checkIfTimeEntryInArray(TimeEntry TimeEntry){
+        for (int i = 0; i < TIME_ENTRY_LIST.size(); i++){
+            if((TimeEntry.getEntryID()) == (TIME_ENTRY_LIST.get(i).getEntryID())){
                 return false;
             }
         }
@@ -351,25 +353,33 @@ public class databaseConnection {
     }
 
     //Useful methods
-    private static project findProject(String projectName){
-        for(int i = 0; i < projectList.size(); i++){
-            if(projectName.equals(projectList.get(i).getName())){
-                return projectList.get(0);
+    public static Project findProject(String projectName){
+        for(int i = 0; i < PROJECT_LIST.size(); i++){
+            if(projectName.equals(PROJECT_LIST.get(i).getName())){
+                return PROJECT_LIST.get(0);
             }
         }
         return null;
     }
-    private static java.util.Date parseDate(String dateFormat){
+    public static java.util.Date parseDate(String dateFormat){
         String[] date = dateFormat.split("-");
         GregorianCalendar calendar = new GregorianCalendar(Integer.parseInt(date[0]),Integer.parseInt(date[1])-1,Integer.parseInt(date[2]),0,0);
         return calendar.getTime();
     }
-    private static user findUser(String userName){
-        for(int i = 0; i < userList.size(); i++){
-            if(userName.equals(userList.get(i).getUserName())){
-                return userList.get(i);
+    public static Users findUser(String userName){
+        for(int i = 0; i < USERS_LIST.size(); i++){
+            if(userName.equals(USERS_LIST.get(i).getUserName())){
+                return USERS_LIST.get(i);
             }
         }
         return null;
+    }
+    public static boolean userExists(String userName){
+        for(int i = 0; i < USERS_LIST.size(); i++){
+            if(userName.equals(USERS_LIST.get(i).getUserName())){
+                return true;
+            }
+        }
+        return false;
     }
 }

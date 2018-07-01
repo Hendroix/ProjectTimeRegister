@@ -1,30 +1,32 @@
+package app.model;
+
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Date;
 
-public class timeEntry {
+public class TimeEntry {
     private int entryID;
-    private project project;
+    private Project Project;
     private double timeUsed;
     private String description;
     private Date dateAdded;
-    private user user;
+    private Users Users;
 
-    public timeEntry(int entryID,project project, double timeUsed, String description, Date dateAdded, user user) {
+    public TimeEntry(int entryID, Project Project, double timeUsed, String description, Date dateAdded, Users Users) {
         this.entryID = entryID;
-        this.project = project;
+        this.Project = Project;
         this.timeUsed = timeUsed;
         this.description = description;
         this.dateAdded = dateAdded;
-        this.user = user;
+        this.Users = Users;
     }
 
-    public project getProject() {
-        return project;
+    public Project getProject() {
+        return Project;
     }
 
-    public void setProject(project project) {
-        this.project = project;
+    public void setProject(Project Project) {
+        this.Project = Project;
     }
 
     public double getTimeUsed() {
@@ -92,12 +94,12 @@ public class timeEntry {
         return dateString;
     }
 
-    public user getUser() {
-        return user;
+    public Users getUsers() {
+        return Users;
     }
 
-    public void setUser(user user) {
-        this.user = user;
+    public void setUsers(Users Users) {
+        this.Users = Users;
     }
 
     public int getEntryID() {
@@ -110,6 +112,6 @@ public class timeEntry {
 
     @Override
     public String toString() {
-        return entryID + "|" + project.getName() + ", added: " + timeUsed + ", for " + printDateAdded() + ", By " + user.getUserName();
+        return entryID + "|" + Project.getName() + ", added: " + timeUsed + ", for " + printDateAdded() + ", By " + Users.getUserName();
     }
 }

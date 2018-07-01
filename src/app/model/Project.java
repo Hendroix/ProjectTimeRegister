@@ -1,18 +1,20 @@
+package app.model;
+
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class project {
+public class Project {
     private String name;
     private String description;
     private double timeUsed;
     private Date startDate;
     private Date endDate;
-    private ArrayList<timeEntry> timeList = new ArrayList<>();
-    private ArrayList<user> userList = new ArrayList<>();
+    private ArrayList<TimeEntry> timeList = new ArrayList<>();
+    private ArrayList<Users> usersList = new ArrayList<>();
 
-    public project(String name, String description, double timeUsed, Date startDate, Date endDate) {
+    public Project(String name, String description, double timeUsed, Date startDate, Date endDate) {
         this.name = name;
         this.description = description;
         this.timeUsed = timeUsed;
@@ -161,33 +163,33 @@ public class project {
         }
     }
 
-    public ArrayList<timeEntry> getTimeList() {
+    public ArrayList<TimeEntry> getTimeList() {
         return timeList;
     }
 
-    public void addToTimeList(timeEntry timeEntry){
-        timeList.add(timeEntry);
-        addUserToUserList(timeEntry.getUser());
+    public void addToTimeList(TimeEntry TimeEntry){
+        timeList.add(TimeEntry);
+        addUserToUserList(TimeEntry.getUsers());
     }
 
-    public ArrayList<user> getUserList() {
-        return userList;
+    public ArrayList<Users> getUsersList() {
+        return usersList;
     }
 
-    public void addUserToUserList(user user) {
+    public void addUserToUserList(Users Users) {
         boolean exsists = false;
-        for(var i = 0; i < userList.size(); i++){
-            if(user == userList.get(i)){
+        for(var i = 0; i < usersList.size(); i++){
+            if(Users == usersList.get(i)){
                 exsists = true;
             }
         }
         if(!exsists){
-            userList.add(user);
+            usersList.add(Users);
         }
     }
 
     @Override
     public String toString() {
-        return "Prosjekt: '" + name + "'. Tid brukt: " + printTimeUsed() + ". Startet " + printStartDate() + ". " + printEndDate() + "Antall logginger: " + timeList.size() + ", av " + userList.size() + " person(er).";
+        return "Prosjekt: '" + name + "'. Tid brukt: " + printTimeUsed() + ". Startet " + printStartDate() + ". " + printEndDate() + "Antall logginger: " + timeList.size() + ", av " + usersList.size() + " person(er).";
     }
 }

@@ -1,10 +1,12 @@
-public class user {
+package app.model;
+
+public class Users {
     private String userName;
     private String userPass;
     private String firstName;
     private String lastName;
 
-    public user(String userName, String userPass, String firstName, String lastName) {
+    public Users(String userName, String userPass, String firstName, String lastName) {
         this.userName = userName;
         this.userPass = userPass;
         this.firstName = firstName;
