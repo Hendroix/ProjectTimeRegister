@@ -112,6 +112,6 @@ public class TimeEntry {
 
     @Override
     public String toString() {
-        return entryID + "|" + Project.getName() + ", added: " + timeUsed + ", for " + printDateAdded() + ", By " + Users.getUserName();
+        return entryID + "|" + Project.getName() + ", added: " + printDateAdded() + ", for " + timeUsed + ", By " + Users.getUserName();
     }
 }

@@ -1,8 +1,10 @@
 package app.model;
 
 import java.util.Date;
+import java.util.stream.Stream;
 
 import app.controller.LoginPageController;
+import app.controller.MainPageController;
 
 
 public class main {
@@ -17,8 +19,8 @@ public class main {
         DatabaseConnection.getAllUsers(consolePrint);
         DatabaseConnection.getAllTimeEntries(consolePrint);
 
-        LoginPageController loginPageController = new LoginPageController();
-        loginPageController.showLoginPageWindow();
+        MainPageController mainPageController = new MainPageController();
+        mainPageController.showMainPageController();
 
     }
 

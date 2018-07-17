@@ -24,6 +24,7 @@ public class LoginPageController {
     public void showLoginPageWindow() {
         loginPage.setVisible(true);
     }
+
     public void closeLoginWindow(){
         loginPage.setVisible(false);
         loginPage.dispose();
@@ -51,6 +52,7 @@ public class LoginPageController {
             loginMethod();
         }
     }
+
     private class enterKeyListener extends KeyAdapter{
         @Override
         public void keyPressed(KeyEvent e) {
@@ -73,13 +75,9 @@ public class LoginPageController {
                     if (checkPasswordAndUsername(checkUsers, loginPage.getTextFieldPassWord().getPassword())) {
                         labelUserFeedBack.setText("Logging in...");
                         resetTextBoxes();
+                        MainPageController mainPageController = new MainPageController();
+                        mainPageController.showMainPageController();
                         closeLoginWindow();
-                        try {
-                            TimeUnit.SECONDS.sleep(5);
-                            showLoginPageWindow();
-                        } catch (InterruptedException e1) {
-                            e1.printStackTrace();
-                        }
                     } else {
                         labelUserFeedBack.setText("Password or username is incorrect.");
                     }
