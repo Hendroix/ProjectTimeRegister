@@ -10,6 +10,7 @@ import app.controller.MainPageController;
 public class main {
     public static Project testProject;
     public static boolean consolePrint = false;
+    public static Users logedInUser;
 
     public static void main(String[] args){
         //fillDatabase();

@@ -12,6 +12,7 @@ public class SeeTimeEntryPage extends JFrame{
         setSize(500,500);
         setContentPane(panel);
         setLocationRelativeTo(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
     public JPanel getPanel() {

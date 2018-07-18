@@ -14,6 +14,7 @@ public class LoginPage extends JFrame{
         setSize(500,500);
         setContentPane(panel1);
         setLocationRelativeTo(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
     public JButton getLoginButton() {

@@ -78,9 +78,9 @@ public class MainPageController {
     private class gotoNewEntryPage implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e){
-            //AddNewPageController addNewPageController = new AddNewPageController();
-            //addNewPageController.showAddNewPageController();
-            //closeMainPageController();
+            AddNewPageController addNewPageController = new AddNewPageController();
+            addNewPageController.showAddNewPageController();
+            closeMainPageController();
         }
     }
 

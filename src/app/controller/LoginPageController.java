@@ -75,6 +75,7 @@ public class LoginPageController {
                     if (checkPasswordAndUsername(checkUsers, loginPage.getTextFieldPassWord().getPassword())) {
                         labelUserFeedBack.setText("Logging in...");
                         resetTextBoxes();
+                        main.logedInUser = checkUsers;
                         MainPageController mainPageController = new MainPageController();
                         mainPageController.showMainPageController();
                         closeLoginWindow();

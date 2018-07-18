@@ -15,6 +15,7 @@ public class MainPage extends JFrame{
         setSize(500,500);
         setContentPane(mainJPanel);
         setLocationRelativeTo(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
     public JButton getUsersButton() {
