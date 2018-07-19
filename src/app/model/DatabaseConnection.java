@@ -102,7 +102,7 @@ public class DatabaseConnection {
             Statement statement = connection.createStatement();
 
             String sqlStatement = "INSERT INTO Project VALUES('" + Project.getName() + "','" + Project.getDescription() +
-                    "','" + Project.getTimeUsed() + "','" + Project.dbStartDate() +"','" + Project.dbEndDate() + "')";
+                    "','" + Project.getTimeUsed() + "','" + Project.getStartDate() +"','" + Project.getEndDate() + "')";
             statement.executeUpdate(sqlStatement);
 
         }catch (SQLException ex){
@@ -123,7 +123,7 @@ public class DatabaseConnection {
             String sqlStatement = "SELECT * FROM Project";
             ResultSet resultSet = statement.executeQuery(sqlStatement);
             while(resultSet.next()){
-                Project tmp = new Project(resultSet.getString(1), resultSet.getString(1), resultSet.getDouble(3),parseDate(resultSet.getString(4)),parseDate(resultSet.getString(5)));
+                Project tmp = new Project(resultSet.getString(1), resultSet.getString(1), resultSet.getDouble(3),(resultSet.getString(4)),(resultSet.getString(5)));
                 if(checkIfProjectInArray(tmp)){
                     PROJECT_LIST.add(tmp);
                 }
@@ -234,10 +234,9 @@ public class DatabaseConnection {
             Statement statement = connection.createStatement();
 
             String sqlStatement = "INSERT INTO TimeEntry VALUES(" + "0" + ",'" + TimeEntry.getProject().getName() +
-                    "'," + TimeEntry.getTimeUsed() + ",'" + TimeEntry.getDescription() +"','" + TimeEntry.dbDateAdded() +"','" + TimeEntry.getUsers().getUserName() + "')";
+                    "'," + TimeEntry.getTimeUsed() + ",'" + TimeEntry.getDescription() +"','" + TimeEntry.getDateAdded() +"','" + TimeEntry.getUsers().getUserName() + "')";
             statement.executeUpdate(sqlStatement);
             updateTimeInProject(TimeEntry.getProject().getName());
-
         }catch (SQLException ex){
             ex.printStackTrace();
         }catch (ClassNotFoundException e) {
@@ -257,7 +256,7 @@ public class DatabaseConnection {
             ResultSet resultSet = statement.executeQuery(sqlStatement);
             while(resultSet.next()){
                 TimeEntry tmp = new TimeEntry(resultSet.getInt(1),findProject(resultSet.getString(2)),
-                    resultSet.getDouble(3),resultSet.getString(4),parseDate(resultSet.getString(5)),findUser(resultSet.getString(6)));
+                    resultSet.getDouble(3),resultSet.getString(4),(resultSet.getString(5)),findUser(resultSet.getString(6)));
                 if(checkIfTimeEntryInArray(tmp)){
                     TIME_ENTRY_LIST.add(tmp);
                     tmp.getProject().addToTimeList(tmp);
@@ -361,11 +360,6 @@ public class DatabaseConnection {
         }
         return null;
     }
-    public static java.util.Date parseDate(String dateFormat){
-        String[] date = dateFormat.split("-");
-        GregorianCalendar calendar = new GregorianCalendar(Integer.parseInt(date[0]),Integer.parseInt(date[1])-1,Integer.parseInt(date[2]),0,0);
-        return calendar.getTime();
-    }
     public static Users findUser(String userName){
         for(int i = 0; i < USERS_LIST.size(); i++){
             if(userName.equals(USERS_LIST.get(i).getUserName())){
@@ -374,6 +368,16 @@ public class DatabaseConnection {
         }
         return null;
     }
+
+    public static boolean projectExists(String projectName){
+        for(int i = 0; i < PROJECT_LIST.size(); i++){
+            if(projectName.equals(PROJECT_LIST.get(i).getName())){
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static boolean userExists(String userName){
         for(int i = 0; i < USERS_LIST.size(); i++){
             if(userName.equals(USERS_LIST.get(i).getUserName())){

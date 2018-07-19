@@ -9,12 +9,12 @@ public class Project {
     private String name;
     private String description;
     private double timeUsed;
-    private Date startDate;
-    private Date endDate;
+    private String startDate;
+    private String endDate;
     private ArrayList<TimeEntry> timeList = new ArrayList<>();
     private ArrayList<Users> usersList = new ArrayList<>();
 
-    public Project(String name, String description, double timeUsed, Date startDate, Date endDate) {
+    public Project(String name, String description, double timeUsed, String startDate, String endDate) {
         this.name = name;
         this.description = description;
         this.timeUsed = timeUsed;
@@ -59,108 +59,20 @@ public class Project {
         return "Dager: " + days + ", Timer: " + hours + ", Minutter: " + min + " TOTALT: " + String.format("%.2f",timeUsed);
     }
 
-    public Date getStartDate() {
+    public String getStartDate() {
         return startDate;
     }
 
-    public String printStartDate(){
-        LocalDate localDate = startDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-        int year = localDate.getYear();
-        int month = localDate.getMonthValue();
-        String monthString;
-        String dayString;
-        if(month < 10){
-            monthString = "0" + month;
-        }else{
-            monthString = "" + month;
-        }
-        int day = localDate.getDayOfMonth();
-        if(day < 10){
-            dayString = "0" + day;
-        }else{
-            dayString = "" + day;
-        }
-        return dayString + "." + monthString + "." + year;
-    }
-
-    public void setStartDate(Date startDate) {
+    public void setStartDate(String startDate) {
         this.startDate = startDate;
     }
 
-    public Date getEndDate() {
+    public String getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(Date endDate) {
+    public void setEndDate(String endDate) {
         this.endDate = endDate;
-    }
-
-    public String dbStartDate(){
-        LocalDate localDate = startDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-        int year = localDate.getYear();
-        int month = localDate.getMonthValue();
-        String monthString;
-        String dayString;
-        if(month < 10){
-            monthString = "0" + month;
-        }else{
-            monthString = "" + month;
-        }
-        int day = localDate.getDayOfMonth();
-        if(day < 10){
-            dayString = "0" + day;
-        }else{
-            dayString = "" + day;
-        }
-        return year + "-" + monthString + "-" + dayString;
-    }
-
-    public String dbEndDate() {
-        if(endDate != null){
-            LocalDate localDate = endDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-            int year = localDate.getYear();
-            int month = localDate.getMonthValue();
-            String monthString;
-            String dayString;
-            if(month < 10){
-                monthString = "0" + month;
-            }else{
-                monthString = "" + month;
-            }
-            int day = localDate.getDayOfMonth();
-            if(day < 10){
-                dayString = "0" + day;
-            }else{
-                dayString = "" + day;
-            }
-            return year + "-" + monthString + "-" + dayString;
-        }else{
-            return "2000-01-01";
-        }
-    }
-
-    public String printEndDate(){
-        if(endDate != null && endDate.after(startDate)){
-            LocalDate localDate = endDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-            int year = localDate.getYear();
-            int month = localDate.getMonthValue();
-            String monthString;
-            String dayString;
-            if(month < 10){
-                monthString = "0" + month;
-            }else{
-                monthString = "" + month;
-            }
-            int day = localDate.getDayOfMonth();
-            if(day < 10){
-                dayString = "0" + day;
-            }else{
-                dayString = "" + day;
-            }
-            return "Avsluttet " + dayString + "." + monthString + "." + year + ". ";
-        }else{
-            return "Under utvikling. ";
-        }
     }
 
     public ArrayList<TimeEntry> getTimeList() {
@@ -170,6 +82,15 @@ public class Project {
     public void addToTimeList(TimeEntry TimeEntry){
         timeList.add(TimeEntry);
         addUserToUserList(TimeEntry.getUsers());
+    }
+
+    public String printEndDate(){
+     String endDateString = endDate;
+     if(endDateString.equals(startDate)){
+         return "Under utvikling";
+     }else{
+         return endDateString;
+     }
     }
 
     public ArrayList<Users> getUsersList() {
@@ -190,6 +111,7 @@ public class Project {
 
     @Override
     public String toString() {
-        return "Prosjekt: '" + name + "'. Tid brukt: " + printTimeUsed() + ". Startet " + printStartDate() + ". " + printEndDate() + "Antall logginger: " + timeList.size() + ", av " + usersList.size() + " person(er).";
+        return "Prosjekt: '" + name + "'. Tid brukt: " + printTimeUsed() + ". Startet " + startDate + ". " + printEndDate() + ". Antall loggninger: " + timeList.size() +
+                ", av " + usersList.size() + " person(er).";
     }
 }

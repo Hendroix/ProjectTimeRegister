@@ -9,10 +9,10 @@ public class TimeEntry {
     private Project Project;
     private double timeUsed;
     private String description;
-    private Date dateAdded;
+    private String dateAdded;
     private Users Users;
 
-    public TimeEntry(int entryID, Project Project, double timeUsed, String description, Date dateAdded, Users Users) {
+    public TimeEntry(int entryID, Project Project, double timeUsed, String description, String dateAdded, Users Users) {
         this.entryID = entryID;
         this.Project = Project;
         this.timeUsed = timeUsed;
@@ -45,53 +45,12 @@ public class TimeEntry {
         this.description = description;
     }
 
-    public Date getDateAdded() {
+    public String getDateAdded() {
         return dateAdded;
     }
 
-    public String dbDateAdded(){
-        LocalDate localDate = dateAdded.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-        int year = localDate.getYear();
-        int month = localDate.getMonthValue();
-        String monthString;
-        String dayString;
-        if (month < 10) {
-            monthString = "0" + month;
-        } else {
-            monthString = "" + month;
-        }
-        int day = localDate.getDayOfMonth();
-        if (day < 10) {
-            dayString = "0" + day;
-        } else {
-            dayString = "" + day;
-        }
-        return year + "-" + monthString + "-" + dayString;
-    }
-
-    public void setDateAdded(Date dateAdded) {
+    public void setDateAdded(String dateAdded) {
         this.dateAdded = dateAdded;
-    }
-
-    public String printDateAdded(){
-        LocalDate localDate = dateAdded.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-        int year = localDate.getYear();
-        int month = localDate.getMonthValue();
-        String monthString;
-        String dayString;
-        if(month < 10){
-            monthString = "0" + month;
-        }else{
-            monthString = "" + month;
-        }
-        int day = localDate.getDayOfMonth();
-        if(day < 10){
-            dayString = "0" + day;
-        }else{
-            dayString = "" + day;
-        }
-        String dateString = dayString + "." + monthString + "." + year;
-        return dateString;
     }
 
     public Users getUsers() {
@@ -112,6 +71,6 @@ public class TimeEntry {
 
     @Override
     public String toString() {
-        return entryID + "|" + Project.getName() + ", added: " + printDateAdded() + ", for " + timeUsed + ", By " + Users.getUserName();
+        return entryID + "|" + Project.getName() + ", '" + description + "' added: " + dateAdded + ", for " + timeUsed + ", By " + Users.getUserName();
     }
 }

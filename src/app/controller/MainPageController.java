@@ -1,6 +1,8 @@
 package app.controller;
 
 import javax.swing.*;
+
+import app.model.DatabaseConnection;
 import app.view.MainPage;
 
 import java.awt.event.ActionEvent;
@@ -14,10 +16,14 @@ public class MainPageController {
     private JButton projectButton;
     private JButton timeEntryButton;
     private JButton newEntryButton;
+    private boolean consolePrint = false;
 
     public MainPageController(){
         initComponents();
         initListeners();
+        DatabaseConnection.getAllProjects(consolePrint);
+        DatabaseConnection.getAllUsers(consolePrint);
+        DatabaseConnection.getAllTimeEntries(consolePrint);
     }
 
     public void showMainPageController(){

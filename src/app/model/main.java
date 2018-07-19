@@ -16,10 +16,6 @@ public class main {
         //fillDatabase();
         //printAllInfo();
 
-        DatabaseConnection.getAllProjects(consolePrint);
-        DatabaseConnection.getAllUsers(consolePrint);
-        DatabaseConnection.getAllTimeEntries(consolePrint);
-
         MainPageController mainPageController = new MainPageController();
         mainPageController.showMainPageController();
 
@@ -30,7 +26,7 @@ public class main {
         TimeEntry testEntry1,testEntry2,testEntry3,testEntry4,testEntry5,testEntry6,testEntry7,testEntry8,testEntry9,testEntry10,testEntry11;
         String name = "Time Registrerings System";
         String desc = "Timesregistrerings system i Java med Databasetilkobling/Lokaltilkobling.";
-        Date date = new Date();
+        String date = 2018 + "-" + 07 +"-" + 07;
         testProject = new Project(name,desc, 0, date, date);
         testUsers1 = new Users("Hendroix","1234","Henrik","Olsen");
         testUsers2 = new Users("Opiah","4567","Ole","Tholderen");
