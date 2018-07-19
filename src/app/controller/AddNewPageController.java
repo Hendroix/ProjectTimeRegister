@@ -1,9 +1,6 @@
 package app.controller;
 
-import app.model.DatabaseConnection;
-import app.model.Project;
-import app.model.TimeEntry;
-import app.model.Users;
+import app.model.*;
 import app.view.AddNewPage;
 
 import javax.swing.*;
@@ -80,7 +77,23 @@ public class AddNewPageController {
              ) {
             userComboBox.addItem(u.getUserName());
         }
+        setSelectedValue(userComboBox, main.logedInUser);
+
         updateSize();
+    }
+
+    private void setSelectedValue(JComboBox userComboBox, Users logedInUser) {
+        if(userComboBox.getItemCount() > 0 && logedInUser != null){
+            for(int i = 0; i < userComboBox.getItemCount(); i++){
+                String currentUser = logedInUser.getUserName();
+                Object checkUser = userComboBox.getItemAt(i);
+                if(currentUser == checkUser){
+                    userComboBox.setSelectedIndex(i);
+                    break;
+                }
+            }
+        }
+        userComboBox.setSelectedIndex(0);
     }
 
     private void setCurrentDate(){

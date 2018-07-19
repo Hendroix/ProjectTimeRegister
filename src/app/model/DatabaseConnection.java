@@ -290,7 +290,8 @@ public class DatabaseConnection {
             e.printStackTrace();
         }
     }
-    public static void getTimeEntryByProject(String projectName){
+    public static ArrayList<TimeEntry> getTimeEntryByProject(String projectName){
+        ArrayList<TimeEntry> timeEntries = new ArrayList<>();
         try {
             Class.forName(DRIVER);
             Connection connection = DriverManager.getConnection(url, username, passowrd);
@@ -299,14 +300,16 @@ public class DatabaseConnection {
             String sqlStatement = "SELECT * FROM TimeEntry WHERE projectName ='" + projectName + "'";
             ResultSet resultSet = statement.executeQuery(sqlStatement);
             while(resultSet.next()){
-                System.out.println(resultSet.getInt(1) + ", " + resultSet.getString(2) + ", " + resultSet.getDouble(3)
-                        + ", " + resultSet.getString(4) + " " + resultSet.getString(5) + ", " + resultSet.getString(6));
+                timeEntries.add(new TimeEntry(resultSet.getInt(1), findProject(resultSet.getString(2)), resultSet.getDouble(3), resultSet.getString(4),
+                        resultSet.getString(5), findUser(resultSet.getString(6))));
             }
+            return timeEntries;
         }catch (SQLException ex){
             ex.printStackTrace();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
+        return timeEntries;
     }
     public static void deleteTimeEntryByProject(String projectName){
         try{
@@ -354,7 +357,7 @@ public class DatabaseConnection {
     public static Project findProject(String projectName){
         for(int i = 0; i < PROJECT_LIST.size(); i++){
             if(projectName.equals(PROJECT_LIST.get(i).getName())){
-                return PROJECT_LIST.get(0);
+                return PROJECT_LIST.get(i);
             }
         }
         return null;

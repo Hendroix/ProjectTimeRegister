@@ -7,6 +7,9 @@ public class SeeTimeEntryPage extends JFrame{
     private JPanel panel;
     private JList timeEntryJList;
     private JButton backButton;
+    private JComboBox projectComboBox;
+    private JButton getSpesificButton;
+    private JScrollPane jScrollPane;
 
     public SeeTimeEntryPage(){
         setSize(500,500);
@@ -37,5 +40,29 @@ public class SeeTimeEntryPage extends JFrame{
 
     public void setBackButton(JButton backButton) {
         this.backButton = backButton;
+    }
+
+    public JComboBox getProjectComboBox() {
+        return projectComboBox;
+    }
+
+    public void setProjectComboBox(JComboBox projectComboBox) {
+        this.projectComboBox = projectComboBox;
+    }
+
+    public JButton getGetSpesificButton() {
+        return getSpesificButton;
+    }
+
+    public void setGetSpesificButton(JButton getSpesificButton) {
+        this.getSpesificButton = getSpesificButton;
+    }
+
+    public JScrollPane getjScrollPane() {
+        return jScrollPane;
+    }
+
+    public void setjScrollPane(JScrollPane jScrollPane) {
+        this.jScrollPane = jScrollPane;
     }
 }

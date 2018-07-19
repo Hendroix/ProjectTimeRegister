@@ -14,7 +14,55 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/model/main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="36" lean-forward="true" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+              <folding>
+                <element signature="method#fillDatabase#0;class#main#0" />
+                <element signature="method#printAllInfo#0;class#main#0" />
+                <element signature="method#randomWithinRange#0;class#main#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SeeTimeEntryPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/view/SeeTimeEntryPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="11" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SeeTimeEntryPage.form" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/view/SeeTimeEntryPage.form">
+          <provider selected="true" editor-type-id="ui-designer" />
+        </entry>
+      </file>
+      <file leaf-file-name="SeeTimeEntryPageController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/controller/SeeTimeEntryPageController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="445">
+              <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#closeSeeTimeEntryPageController#0;class#SeeTimeEntryPageController#0" />
+                <element signature="method#initComponents#0;class#SeeTimeEntryPageController#0" />
+                <element signature="method#initListeners#0;class#SeeTimeEntryPageController#0" />
+                <element signature="class#backButton#0;class#SeeTimeEntryPageController#0" />
+                <element signature="class#getButton#0;class#SeeTimeEntryPageController#0" />
+                <element signature="method#fillTimeEntryJList#0;class#SeeTimeEntryPageController#0" />
+                <element signature="method#fillProjectComboBox#0;class#SeeTimeEntryPageController#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -49,32 +97,32 @@
         <option value="$PROJECT_DIR$/src/app/model/RatabaseConnection.java" />
         <option value="$PROJECT_DIR$/src/app/model/databaseConnection.java" />
         <option value="$PROJECT_DIR$/src/app/view/LoginPage.form" />
-        <option value="$PROJECT_DIR$/src/app/view/SeeProjectPage.java" />
         <option value="$PROJECT_DIR$/src/app/model/Runner.java" />
         <option value="$PROJECT_DIR$/src/app/view/MainPage.form" />
-        <option value="$PROJECT_DIR$/src/app/view/SeeProjectPage.form" />
         <option value="$PROJECT_DIR$/src/app/view/SeeUsersPage.form" />
         <option value="$PROJECT_DIR$/src/app/controller/SeeUsersPageController.java" />
-        <option value="$PROJECT_DIR$/src/app/view/SeeTimeEntryPage.form" />
-        <option value="$PROJECT_DIR$/src/app/controller/SeeTimeEntryPageController.java" />
-        <option value="$PROJECT_DIR$/src/app/controller/SeeProjectPageController.java" />
         <option value="$PROJECT_DIR$/src/app/view/AddNewPage.form" />
         <option value="$PROJECT_DIR$/src/app/view/MainPage.java" />
         <option value="$PROJECT_DIR$/src/app/view/LoginPage.java" />
-        <option value="$PROJECT_DIR$/src/app/view/SeeTimeEntryPage.java" />
         <option value="$PROJECT_DIR$/src/app/view/SeeUsersPage.java" />
         <option value="$PROJECT_DIR$/src/app/controller/MainPageController.java" />
-        <option value="$PROJECT_DIR$/src/app/controller/AddNewPageController.java" />
-        <option value="$PROJECT_DIR$/src/app/model/DatabaseConnection.java" />
-        <option value="$PROJECT_DIR$/src/app/model/main.java" />
         <option value="$PROJECT_DIR$/src/app/model/Project.java" />
         <option value="$PROJECT_DIR$/src/app/model/TimeEntry.java" />
         <option value="$PROJECT_DIR$/src/app/controller/LoginPageController.java" />
         <option value="$PROJECT_DIR$/src/app/view/AddNewPage.java" />
+        <option value="$PROJECT_DIR$/src/app/model/DatabaseConnection.java" />
+        <option value="$PROJECT_DIR$/src/app/model/main.java" />
+        <option value="$PROJECT_DIR$/src/app/controller/AddNewPageController.java" />
+        <option value="$PROJECT_DIR$/src/app/controller/SeeProjectPageController.java" />
+        <option value="$PROJECT_DIR$/src/app/view/SeeProjectPage.java" />
+        <option value="$PROJECT_DIR$/src/app/view/SeeProjectPage.form" />
+        <option value="$PROJECT_DIR$/src/app/view/SeeTimeEntryPage.form" />
+        <option value="$PROJECT_DIR$/src/app/view/SeeTimeEntryPage.java" />
+        <option value="$PROJECT_DIR$/src/app/controller/SeeTimeEntryPageController.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1920" />
@@ -109,7 +157,29 @@
               <item name="ProjectTimeRegister" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjectTimeRegister" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjectTimeRegister" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjectTimeRegister" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjectTimeRegister" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjectTimeRegister" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjectTimeRegister" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="SeeTimeEntryPage" type="e9f4de52:FormNode" />
             </path>
           </expand>
           <select />
@@ -127,12 +197,12 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="app.controller" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\henri\IdeaProjects\timeRegistry\ProjectTimeRegister\src\app" />
       <recent name="C:\Users\henri\IdeaProjects\timeRegistry\ProjectTimeRegister\src\app\view" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="app.controller" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -230,7 +300,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -240,12 +311,12 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.1641791" side_tool="true" weight="0.32897604" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8358209" visible="true" weight="0.32897604" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.8358209" visible="true" weight="0.32897604" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49946696" weight="0.32897604" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18656716" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18656716" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -293,7 +364,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="34" />
+      <option name="time" value="35" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -494,72 +565,16 @@
     <entry file="file://$PROJECT_DIR$/src/app/view/SeeUsersPage.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/view/SeeTimeEntryPage.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/view/SeeProjectPage.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/view/AddNewPage.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/view/MainPage.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/model/DatabaseConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#addUser#0;class#DatabaseConnection#0" />
-            <element signature="method#getAllUsers#0;class#DatabaseConnection#0" />
-            <element signature="method#getSpesificUser#0;class#DatabaseConnection#0" />
-            <element signature="method#deleteSpesificUser#0;class#DatabaseConnection#0" />
-            <element signature="method#addProject#0;class#DatabaseConnection#0" />
-            <element signature="method#getAllProjects#0;class#DatabaseConnection#0" />
-            <element signature="method#getSpesificProject#0;class#DatabaseConnection#0" />
-            <element signature="method#deleteSpesificProject#0;class#DatabaseConnection#0" />
-            <element signature="method#updateTimeInProject#0;class#DatabaseConnection#0" />
-            <element signature="method#setEndDate#0;class#DatabaseConnection#0" />
-            <element signature="method#addTimeEntry#0;class#DatabaseConnection#0" />
-            <element signature="method#getAllTimeEntries#0;class#DatabaseConnection#0" />
-            <element signature="method#getTimeEntryByUser#0;class#DatabaseConnection#0" />
-            <element signature="method#getTimeEntryByProject#0;class#DatabaseConnection#0" />
-            <element signature="method#deleteTimeEntryByProject#0;class#DatabaseConnection#0" />
-            <element signature="method#checkIfUserInArray#0;class#DatabaseConnection#0" />
-            <element signature="method#checkIfProjectInArray#0;class#DatabaseConnection#0" />
-            <element signature="method#checkIfTimeEntryInArray#0;class#DatabaseConnection#0" />
-            <element signature="method#findProject#0;class#DatabaseConnection#0" />
-            <element signature="method#findUser#0;class#DatabaseConnection#0" />
-            <element signature="method#projectExists#0;class#DatabaseConnection#0" />
-            <element signature="method#userExists#0;class#DatabaseConnection#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/model/Databasepassword.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/model/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding>
-            <element signature="method#printAllInfo#0;class#main#0" />
-            <element signature="method#randomWithinRange#0;class#main#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/model/TimeEntry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -570,46 +585,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/model/Project.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding>
-            <element signature="method#printTimeUsed#0;class#Project#0" />
-            <element signature="method#addToTimeList#0;class#Project#0" />
-            <element signature="e#2336#2337#0" expanded="true" />
-            <element signature="e#2368#2369#0" expanded="true" />
-            <element signature="method#addUserToUserList#0;class#Project#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/model/Runner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controller/AddNewPageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#closeAddNewPageController#0;class#AddNewPageController#0" />
-            <element signature="method#initComponents#0;class#AddNewPageController#0" />
-            <element signature="method#initListeners#0;class#AddNewPageController#0" />
-            <element signature="class#backButton#0;class#AddNewPageController#0" />
-            <element signature="class#addNewTimeEntryEntry#0;class#AddNewPageController#0" />
-            <element signature="method#fillComboBoxes#0;class#AddNewPageController#0" />
-            <element signature="method#setCurrentDate#0;class#AddNewPageController#0" />
-            <element signature="method#addNewTimeEntryEntry#0;class#AddNewPageController#0" />
-            <element signature="method#checkDateString#0;class#AddNewPageController#0" />
-            <element signature="method#correctDateString#0;class#AddNewPageController#0" />
-            <element signature="method#checkTimeUsed#0;class#AddNewPageController#0" />
-            <element signature="method#checkDescription#0;class#AddNewPageController#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -631,55 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controller/SeeProjectPageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#closeSeeProjectPageController#0;class#SeeProjectPageController#0" />
-            <element signature="method#initComponents#0;class#SeeProjectPageController#0" />
-            <element signature="method#initListeners#0;class#SeeProjectPageController#0" />
-            <element signature="class#backButton#0;class#SeeProjectPageController#0" />
-            <element signature="method#fillProjectJList#0;class#SeeProjectPageController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controller/SeeTimeEntryPageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#closeSeeTimeEntryPageController#0;class#SeeTimeEntryPageController#0" />
-            <element signature="method#initComponents#0;class#SeeTimeEntryPageController#0" />
-            <element signature="class#backButton#0;class#SeeTimeEntryPageController#0" />
-            <element signature="method#fillTimeEntryJList#0;class#SeeTimeEntryPageController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controller/LoginPageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#LoginPageController#0;class#LoginPageController#0" />
-            <element signature="method#closeLoginWindow#0;class#LoginPageController#0" />
-            <element signature="method#initComponents#0;class#LoginPageController#0" />
-            <element signature="method#initListeners#0;class#LoginPageController#0" />
-            <element signature="class#checkPasswordListner#0;class#LoginPageController#0" />
-            <element signature="class#enterKeyListener#0;class#LoginPageController#0" />
-            <element signature="method#loginMethod#0;class#LoginPageController#0" />
-            <element signature="method#checkPasswordAndUsername#0;class#LoginPageController#0" />
-            <element signature="method#checkPassword#0;class#LoginPageController#0" />
-            <element signature="method#resetTextBoxes#0;class#LoginPageController#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -718,13 +648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/view/SeeProjectPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/view/SeeUsersPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -746,10 +669,165 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/model/TimeEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="68" column="29" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
+          <folding>
+            <element signature="method#toString#0;class#TimeEntry#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/model/Project.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="823">
+          <caret line="108" column="13" lean-forward="true" selection-start-line="108" selection-start-column="13" selection-end-line="108" selection-end-column="13" />
+          <folding>
+            <element signature="method#printTimeUsed#0;class#Project#0" />
+            <element signature="method#addToTimeList#0;class#Project#0" />
+            <element signature="method#printEndDate#0;class#Project#0" />
+            <element signature="method#addUserToUserList#0;class#Project#0" />
+            <element signature="method#toString#0;class#Project#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/model/DatabaseConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="244" column="55" selection-start-line="244" selection-start-column="55" selection-end-line="244" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#addUser#0;class#DatabaseConnection#0" />
+            <element signature="method#getAllUsers#0;class#DatabaseConnection#0" />
+            <element signature="method#getSpesificUser#0;class#DatabaseConnection#0" />
+            <element signature="method#deleteSpesificUser#0;class#DatabaseConnection#0" />
+            <element signature="method#addProject#0;class#DatabaseConnection#0" />
+            <element signature="method#getAllProjects#0;class#DatabaseConnection#0" />
+            <element signature="method#getSpesificProject#0;class#DatabaseConnection#0" />
+            <element signature="method#deleteSpesificProject#0;class#DatabaseConnection#0" />
+            <element signature="method#updateTimeInProject#0;class#DatabaseConnection#0" />
+            <element signature="method#setEndDate#0;class#DatabaseConnection#0" />
+            <element signature="method#addTimeEntry#0;class#DatabaseConnection#0" />
+            <element signature="method#getAllTimeEntries#0;class#DatabaseConnection#0" />
+            <element signature="method#getTimeEntryByUser#0;class#DatabaseConnection#0" />
+            <element signature="method#getTimeEntryByProject#0;class#DatabaseConnection#0" />
+            <element signature="method#deleteTimeEntryByProject#0;class#DatabaseConnection#0" />
+            <element signature="method#checkIfUserInArray#0;class#DatabaseConnection#0" />
+            <element signature="method#checkIfProjectInArray#0;class#DatabaseConnection#0" />
+            <element signature="method#checkIfTimeEntryInArray#0;class#DatabaseConnection#0" />
+            <element signature="method#findProject#0;class#DatabaseConnection#0" />
+            <element signature="method#findUser#0;class#DatabaseConnection#0" />
+            <element signature="method#projectExists#0;class#DatabaseConnection#0" />
+            <element signature="method#userExists#0;class#DatabaseConnection#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controller/LoginPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="66" column="30" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#LoginPageController#0;class#LoginPageController#0" />
+            <element signature="method#closeLoginWindow#0;class#LoginPageController#0" />
+            <element signature="method#initComponents#0;class#LoginPageController#0" />
+            <element signature="method#initListeners#0;class#LoginPageController#0" />
+            <element signature="class#checkPasswordListner#0;class#LoginPageController#0" />
+            <element signature="class#enterKeyListener#0;class#LoginPageController#0" />
+            <element signature="method#loginMethod#0;class#LoginPageController#0" />
+            <element signature="method#checkPasswordAndUsername#0;class#LoginPageController#0" />
+            <element signature="method#checkPassword#0;class#LoginPageController#0" />
+            <element signature="method#resetTextBoxes#0;class#LoginPageController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/view/SeeProjectPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/model/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="36" lean-forward="true" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+          <folding>
+            <element signature="method#fillDatabase#0;class#main#0" />
+            <element signature="method#printAllInfo#0;class#main#0" />
+            <element signature="method#randomWithinRange#0;class#main#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controller/AddNewPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="24" lean-forward="true" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#closeAddNewPageController#0;class#AddNewPageController#0" />
+            <element signature="method#initComponents#0;class#AddNewPageController#0" />
+            <element signature="method#initListeners#0;class#AddNewPageController#0" />
+            <element signature="class#backButton#0;class#AddNewPageController#0" />
+            <element signature="class#addNewTimeEntryEntry#0;class#AddNewPageController#0" />
+            <element signature="method#fillComboBoxes#0;class#AddNewPageController#0" />
+            <element signature="method#setSelectedValue#0;class#AddNewPageController#0" />
+            <element signature="method#setCurrentDate#0;class#AddNewPageController#0" />
+            <element signature="method#addNewTimeEntryEntry#0;class#AddNewPageController#0" />
+            <element signature="method#checkDateString#0;class#AddNewPageController#0" />
+            <element signature="method#correctDateString#0;class#AddNewPageController#0" />
+            <element signature="method#checkTimeUsed#0;class#AddNewPageController#0" />
+            <element signature="method#checkDescription#0;class#AddNewPageController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controller/SeeProjectPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="30" column="46" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#closeSeeProjectPageController#0;class#SeeProjectPageController#0" />
+            <element signature="method#initListeners#0;class#SeeProjectPageController#0" />
+            <element signature="class#backButton#0;class#SeeProjectPageController#0" />
+            <element signature="method#fillProjectJList#0;class#SeeProjectPageController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/view/SeeProjectPage.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/view/SeeTimeEntryPage.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/view/SeeTimeEntryPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+        <state relative-caret-position="170">
+          <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="11" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controller/SeeTimeEntryPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#closeSeeTimeEntryPageController#0;class#SeeTimeEntryPageController#0" />
+            <element signature="method#initComponents#0;class#SeeTimeEntryPageController#0" />
+            <element signature="method#initListeners#0;class#SeeTimeEntryPageController#0" />
+            <element signature="class#backButton#0;class#SeeTimeEntryPageController#0" />
+            <element signature="class#getButton#0;class#SeeTimeEntryPageController#0" />
+            <element signature="method#fillTimeEntryJList#0;class#SeeTimeEntryPageController#0" />
+            <element signature="method#fillProjectComboBox#0;class#SeeTimeEntryPageController#0" />
+          </folding>
         </state>
       </provider>
     </entry>
