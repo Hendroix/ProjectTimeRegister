@@ -1,9 +1,6 @@
 package app.model;
 
-import java.time.LocalDate;
-import java.time.ZoneId;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Project {
     private String name;

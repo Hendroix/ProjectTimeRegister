@@ -1,9 +1,5 @@
 package app.model;
 
-import java.time.LocalDate;
-import java.time.ZoneId;
-import java.util.Date;
-
 public class TimeEntry {
     private int entryID;
     private Project Project;

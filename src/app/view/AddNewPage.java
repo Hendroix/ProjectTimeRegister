@@ -1,7 +1,6 @@
 package app.view;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class AddNewPage extends JFrame {
 

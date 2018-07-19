@@ -7,11 +7,9 @@ import app.model.Users;
 import app.view.AddNewPage;
 
 import javax.swing.*;
-import javax.xml.crypto.Data;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.time.LocalDate;
-import java.util.Date;
 
 public class AddNewPageController {
 

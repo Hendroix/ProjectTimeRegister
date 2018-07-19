@@ -4,7 +4,6 @@ import java.sql.*;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.ArrayList;
-import java.util.GregorianCalendar;
 
 public class DatabaseConnection {
     static final String DRIVER = "com.mysql.jdbc.Driver";
