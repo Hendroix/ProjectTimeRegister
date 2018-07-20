@@ -10,6 +10,7 @@ public class MainPage extends JFrame{
     private JButton projectButton;
     private JButton timeEntryButton;
     private JButton newEntryButton;
+    private JButton adminButton;
 
     public MainPage(){
         setSize(500,500);
@@ -56,5 +57,13 @@ public class MainPage extends JFrame{
 
     public void setNewEntryButton(JButton newEntryButton) {
         this.newEntryButton = newEntryButton;
+    }
+
+    public JButton getAdminButton() {
+        return adminButton;
+    }
+
+    public void setAdminButton(JButton adminButton) {
+        this.adminButton = adminButton;
     }
 }

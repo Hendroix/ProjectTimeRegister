@@ -3,6 +3,7 @@ package app.controller;
 import javax.swing.*;
 
 import app.model.DatabaseConnection;
+import app.model.main;
 import app.view.MainPage;
 
 import java.awt.event.ActionEvent;
@@ -16,14 +17,21 @@ public class MainPageController {
     private JButton projectButton;
     private JButton timeEntryButton;
     private JButton newEntryButton;
+    private JButton adminButton;
     private boolean consolePrint = false;
+    private static boolean firstLoad = true;
 
     public MainPageController(){
         initComponents();
         initListeners();
-        DatabaseConnection.getAllProjects(consolePrint);
-        DatabaseConnection.getAllUsers(consolePrint);
-        DatabaseConnection.getAllTimeEntries(consolePrint);
+
+        if(firstLoad){
+            System.out.println("Getting information from the database...");
+            DatabaseConnection.getAllProjects(consolePrint);
+            DatabaseConnection.getAllUsers(consolePrint);
+            DatabaseConnection.getAllTimeEntries(consolePrint);
+            firstLoad = false;
+        }
     }
 
     public void showMainPageController(){
@@ -43,6 +51,16 @@ public class MainPageController {
         projectButton = mainPage.getProjectButton();
         timeEntryButton = mainPage.getTimeEntryButton();
         newEntryButton = mainPage.getNewEntryButton();
+        adminButton = mainPage.getAdminButton();
+        if(main.logedInUser != null){
+
+            if(main.logedInUser.getUserName().equals("Hendroix")){
+                adminButton.setVisible(true);
+            }
+        }
+        else{
+            adminButton.setVisible(false);
+        }
     }
 
     public void initListeners(){
@@ -51,6 +69,7 @@ public class MainPageController {
         projectButton.addActionListener(new gotoProjectPage());
         timeEntryButton.addActionListener(new gotoTimeEntryPage());
         newEntryButton.addActionListener(new gotoNewEntryPage());
+        adminButton.addActionListener(new adminPage());
     }
 
     private class gotoUsersPage implements ActionListener{
@@ -95,6 +114,15 @@ public class MainPageController {
         public void actionPerformed(ActionEvent e){
             LoginPageController loginPageController = new LoginPageController();
             loginPageController.showLoginPageWindow();
+            closeMainPageController();
+        }
+    }
+
+    private class adminPage implements ActionListener{
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            AdminPageController adminPageController = new AdminPageController();
+            adminPageController.showAdminPageController();
             closeMainPageController();
         }
     }
