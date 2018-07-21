@@ -72,7 +72,7 @@ public class AdminPageController {
         @Override
         public void actionPerformed(ActionEvent e) {
             newUserPageController newUserPageController = new newUserPageController();
-            //newUserPageController.showEditUserPageController();
+            newUserPageController.showNewUserPageController();
             closeAdminPageController();
         }
     }

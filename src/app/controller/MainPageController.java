@@ -27,9 +27,10 @@ public class MainPageController {
 
         if(firstLoad){
             System.out.println("Getting information from the database...");
-            DatabaseConnection.getAllProjects(consolePrint);
-            DatabaseConnection.getAllUsers(consolePrint);
-            DatabaseConnection.getAllTimeEntries(consolePrint);
+            DatabaseConnection.gatherInfoFromDatabase(consolePrint);
+            System.out.println("TimeEntries:    " + DatabaseConnection.getTimeEntryList().size());
+            System.out.println("Projects:       " + DatabaseConnection.getProjectList().size());
+            System.out.println("Users:          " + DatabaseConnection.getUsersList().size());
             firstLoad = false;
         }
     }

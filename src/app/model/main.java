@@ -1,5 +1,7 @@
 package app.model;
 
+import app.controller.AdminPageController;
+import app.controller.LoginPageController;
 import app.controller.MainPageController;
 
 public class main {
@@ -10,8 +12,11 @@ public class main {
         //fillDatabase();
         //printAllInfo();
 
-        MainPageController mainPageController = new MainPageController();
-        mainPageController.showMainPageController();
+        AdminPageController adminPageController = new AdminPageController();
+        adminPageController.showAdminPageController();
+
+        //LoginPageController loginPageController = new LoginPageController();
+        //loginPageController.showLoginPageWindow();
 
     }
 

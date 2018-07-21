@@ -400,4 +400,10 @@ public class DatabaseConnection {
     public static ArrayList<TimeEntry> getTimeEntryList() {
         return TIME_ENTRY_LIST;
     }
+
+    public static void gatherInfoFromDatabase(boolean print){
+        getAllProjects(print);
+        getAllUsers(print);
+        getAllTimeEntries(print);
+    }
 }
