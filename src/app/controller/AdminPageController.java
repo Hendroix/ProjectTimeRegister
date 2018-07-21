@@ -53,8 +53,8 @@ public class AdminPageController {
     private class newProject implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
-            newProjectPageController newProjectPageController = new newProjectPageController();
-            //newProjectPageController.showNewProjectPageController();
+            NewProjectPageController newProjectPageController = new NewProjectPageController();
+            newProjectPageController.showNewProjcetPageController();
             closeAdminPageController();
         }
     }
@@ -62,8 +62,8 @@ public class AdminPageController {
     private class editProject implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
-            editProjectPageController editProjectPageController = new editProjectPageController();
-            //editProjectPageController.showEditProjectPageController();
+            EditProjectPageController editProjectPageController = new EditProjectPageController();
+            editProjectPageController.showEditProjectPageController();
             closeAdminPageController();
         }
     }
@@ -71,7 +71,7 @@ public class AdminPageController {
     private class newUser implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
-            newUserPageController newUserPageController = new newUserPageController();
+            NewUserPageController newUserPageController = new NewUserPageController();
             newUserPageController.showNewUserPageController();
             closeAdminPageController();
         }
@@ -80,8 +80,8 @@ public class AdminPageController {
     private class editUser implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
-            editUserPageController editUserPageController = new editUserPageController();
-            //editUserPageController.showEditUserPageController();
+            EditUserPageController editUserPageController = new EditUserPageController();
+            editUserPageController.showEditUserPageController();
             closeAdminPageController();
         }
     }
@@ -89,8 +89,8 @@ public class AdminPageController {
     private class changeTimeEntry implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
-            changeTimeEntryPageController changeTimeEntryPageController = new changeTimeEntryPageController();
-            //changeTimeEntryPageController.showChangeTimeEntryPageController();
+            EditTimeEntryPageController editTimeEntryPageController = new EditTimeEntryPageController();
+            editTimeEntryPageController.showEditTimeEntryPageController();
             closeAdminPageController();
         }
     }

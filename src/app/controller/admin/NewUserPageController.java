@@ -1,16 +1,15 @@
 package app.controller.admin;
 
 import app.controller.AdminPageController;
-import app.model.DatabaseConnection;
 import app.model.Users;
 import app.view.admin.*;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class newUserPageController {
+public class NewUserPageController {
 
-    private newUserPage newUserPage;
+    private NewUserPage newUserPage;
     private JTextField userNameComboBox;
     private JTextField firstNameComboBox;
     private JTextField lastNameComboBox;
@@ -18,7 +17,7 @@ public class newUserPageController {
     private JButton backButton;
     private JButton createButton;
 
-    public newUserPageController() {
+    public NewUserPageController() {
         initComponents();
         initListeners();
     }
@@ -33,7 +32,7 @@ public class newUserPageController {
     }
 
     private void initComponents(){
-        newUserPage = new newUserPage();
+        newUserPage = new NewUserPage();
         userNameComboBox = newUserPage.getUserNameComboBox();
         firstNameComboBox = newUserPage.getFirstNameComboBox();
         lastNameComboBox = newUserPage.getLastNameComboBox();

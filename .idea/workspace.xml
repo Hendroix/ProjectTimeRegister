@@ -4,7 +4,49 @@
     <bookmark url="file://$PROJECT_DIR$/src/app/model/DatabaseConnection.java" line="20" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="238fb586-289f-474b-82f8-267ad45114d2" name="Default" comment="" />
+    <list default="true" id="238fb586-289f-474b-82f8-267ad45114d2" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/view/admin/EditTimeEntryPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/timeRegistry/app/controller/AdminPageController$changeTimeEntry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/timeRegistry/app/controller/AdminPageController$changeTimeEntry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/timeRegistry/app/controller/AdminPageController$editProject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/timeRegistry/app/controller/AdminPageController$editProject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/timeRegistry/app/controller/AdminPageController$editUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/timeRegistry/app/controller/AdminPageController$editUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/timeRegistry/app/controller/AdminPageController$newProject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/timeRegistry/app/controller/AdminPageController$newProject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/timeRegistry/app/controller/AdminPageController$newUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/timeRegistry/app/controller/AdminPageController$newUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/timeRegistry/app/controller/admin/changeTimeEntryPageController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/timeRegistry/app/controller/admin/editProjectPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/timeRegistry/app/controller/admin/editProjectPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/timeRegistry/app/controller/admin/editUserPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/timeRegistry/app/controller/admin/editUserPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/timeRegistry/app/controller/admin/newProjectPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/timeRegistry/app/controller/admin/newProjectPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/timeRegistry/app/controller/admin/newUserPageController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/timeRegistry/app/controller/admin/newUserPageController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/timeRegistry/app/controller/admin/newUserPageController$backButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/timeRegistry/app/controller/admin/newUserPageController$backButton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/timeRegistry/app/controller/admin/newUserPageController$createButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/timeRegistry/app/controller/admin/newUserPageController$createButton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/timeRegistry/app/controller/admin/newUserPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/timeRegistry/app/controller/admin/newUserPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/timeRegistry/app/model/DatabaseConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/timeRegistry/app/model/DatabaseConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/timeRegistry/app/model/Databasepassword.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/timeRegistry/app/model/Databasepassword.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/timeRegistry/app/model/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/timeRegistry/app/model/main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/timeRegistry/app/view/admin/changeTimeEntryPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/timeRegistry/app/view/admin/editProjectPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/timeRegistry/app/view/admin/editProjectPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/timeRegistry/app/view/admin/editUserPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/timeRegistry/app/view/admin/editUserPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/timeRegistry/app/view/admin/newProjectPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/timeRegistry/app/view/admin/newProjectPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/timeRegistry/app/view/admin/newUserPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/timeRegistry/app/view/admin/newUserPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/controller/AdminPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/AdminPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/controller/admin/changeTimeEntryPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/admin/EditTimeEntryPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/controller/admin/editProjectPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/admin/EditProjectPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/controller/admin/editUserPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/admin/EditUserPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/controller/admin/newProjectPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/admin/NewProjectPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/controller/admin/newUserPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controller/admin/NewUserPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/model/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/DatabaseConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/model/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/model/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/view/admin/changeTimeEntryPage.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/admin/EditTimeEntryPage.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/view/admin/changeTimeEntryPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/view/admin/editProjectPage.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/admin/EditProjectPage.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/view/admin/editProjectPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/admin/EditProjectPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/view/admin/editUserPage.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/admin/EditUserPage.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/view/admin/editUserPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/admin/EditUserPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/view/admin/newProjectPage.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/admin/NewProjectPage.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/view/admin/newProjectPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/admin/NewProjectPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/view/admin/newUserPage.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/admin/NewUserPage.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/view/admin/newUserPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/view/admin/NewUserPage.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,10 +60,9 @@
       <file leaf-file-name="main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/model/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+            <state relative-caret-position="34">
+              <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="method#fillDatabase#0;class#main#0" />
                 <element signature="method#printAllInfo#0;class#main#0" />
                 <element signature="method#randomWithinRange#0;class#main#0" />
@@ -33,100 +74,103 @@
       <file leaf-file-name="AdminPageController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/controller/AdminPageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="74" column="62" selection-start-line="74" selection-start-column="62" selection-end-line="74" selection-end-column="62" />
+            <state relative-caret-position="629">
+              <caret line="88" column="59" selection-start-line="88" selection-start-column="59" selection-end-line="88" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#AdminPageController#0;class#AdminPageController#0" />
+                <element signature="method#closeAdminPageController#0;class#AdminPageController#0" />
                 <element signature="method#initComponents#0;class#AdminPageController#0" />
                 <element signature="method#initListeners#0;class#AdminPageController#0" />
+                <element signature="class#newProject#0;class#AdminPageController#0" />
+                <element signature="class#editProject#0;class#AdminPageController#0" />
+                <element signature="class#newUser#0;class#AdminPageController#0" />
+                <element signature="class#editUser#0;class#AdminPageController#0" />
+                <element signature="class#changeTimeEntry#0;class#AdminPageController#0" />
                 <element signature="class#backButton#0;class#AdminPageController#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="newUserPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/view/admin/newUserPage.java">
+      <file leaf-file-name="EditTimeEntryPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/view/admin/EditTimeEntryPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="12" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="newUserPageController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/controller/admin/newUserPageController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="687">
-              <caret line="70" column="56" lean-forward="true" selection-start-line="70" selection-start-column="56" selection-end-line="70" selection-end-column="56" />
+            <state relative-caret-position="510">
+              <caret line="39" column="39" lean-forward="true" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#597#598#0" expanded="true" />
-                <element signature="e#623#624#0" expanded="true" />
+                <element signature="e#642#643#0" expanded="true" />
+                <element signature="e#670#671#0" expanded="true" />
+                <element signature="e#712#713#0" expanded="true" />
+                <element signature="e#746#747#0" expanded="true" />
+                <element signature="e#785#786#0" expanded="true" />
+                <element signature="e#819#820#0" expanded="true" />
+                <element signature="e#874#875#0" expanded="true" />
+                <element signature="e#920#921#0" expanded="true" />
+                <element signature="e#958#959#0" expanded="true" />
+                <element signature="e#991#992#0" expanded="true" />
+                <element signature="e#1044#1045#0" expanded="true" />
+                <element signature="e#1088#1089#0" expanded="true" />
+                <element signature="e#1129#1130#0" expanded="true" />
+                <element signature="e#1165#1166#0" expanded="true" />
+                <element signature="e#1224#1225#0" expanded="true" />
+                <element signature="e#1274#1275#0" expanded="true" />
+                <element signature="e#1321#1322#0" expanded="true" />
+                <element signature="e#1361#1362#0" expanded="true" />
+                <element signature="e#1430#1431#0" expanded="true" />
+                <element signature="e#1488#1489#0" expanded="true" />
+                <element signature="e#1526#1527#0" expanded="true" />
+                <element signature="e#1559#1560#0" expanded="true" />
+                <element signature="e#1612#1613#0" expanded="true" />
+                <element signature="e#1656#1657#0" expanded="true" />
+                <element signature="e#1696#1697#0" expanded="true" />
+                <element signature="e#1731#1732#0" expanded="true" />
+                <element signature="e#1788#1789#0" expanded="true" />
+                <element signature="e#1836#1837#0" expanded="true" />
+                <element signature="e#1896#1897#0" expanded="true" />
+                <element signature="e#1949#1950#0" expanded="true" />
+                <element signature="e#2185#2186#0" expanded="true" />
+                <element signature="e#2235#2236#0" expanded="true" />
+                <element signature="e#2450#2451#0" expanded="true" />
+                <element signature="e#2490#2491#0" expanded="true" />
+                <element signature="e#2560#2561#0" expanded="true" />
+                <element signature="e#2618#2619#0" expanded="true" />
+                <element signature="e#2669#2670#0" expanded="true" />
+                <element signature="e#2712#2713#0" expanded="true" />
+                <element signature="e#2901#2902#0" expanded="true" />
+                <element signature="e#2942#2943#0" expanded="true" />
+                <element signature="e#3014#3015#0" expanded="true" />
+                <element signature="e#3074#3075#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="newUserPage.form" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/view/admin/newUserPage.form">
+      <file leaf-file-name="EditTimeEntryPageController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/controller/admin/EditTimeEntryPageController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="310">
+              <caret line="62" column="53" selection-start-line="62" selection-start-column="53" selection-end-line="62" selection-end-column="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#814#815#0" expanded="true" />
+                <element signature="e#846#847#0" expanded="true" />
+                <element signature="e#2833#2834#0" expanded="true" />
+                <element signature="e#2877#2878#0" expanded="true" />
+                <element signature="e#3015#3016#0" expanded="true" />
+                <element signature="e#3068#3069#0" expanded="true" />
+                <element signature="e#3204#3205#0" expanded="true" />
+                <element signature="e#3257#3258#0" expanded="true" />
+                <element signature="e#3399#3400#0" expanded="true" />
+                <element signature="e#3452#3453#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EditTimeEntryPage.form" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/view/admin/EditTimeEntryPage.form">
           <provider selected="true" editor-type-id="ui-designer" />
-        </entry>
-      </file>
-      <file leaf-file-name="MainPageController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/controller/MainPageController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#closeMainPageController#0;class#MainPageController#0" />
-                <element signature="method#initComponents#0;class#MainPageController#0" />
-                <element signature="method#initListeners#0;class#MainPageController#0" />
-                <element signature="class#gotoUsersPage#0;class#MainPageController#0" />
-                <element signature="class#gotoProjectPage#0;class#MainPageController#0" />
-                <element signature="class#gotoTimeEntryPage#0;class#MainPageController#0" />
-                <element signature="class#gotoNewEntryPage#0;class#MainPageController#0" />
-                <element signature="class#logout#0;class#MainPageController#0" />
-                <element signature="class#adminPage#0;class#MainPageController#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatabaseConnection.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/model/DatabaseConnection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="313" column="47" selection-start-line="313" selection-start-column="23" selection-end-line="313" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#addUser#0;class#DatabaseConnection#0" />
-                <element signature="method#getAllUsers#0;class#DatabaseConnection#0" />
-                <element signature="method#getSpesificUser#0;class#DatabaseConnection#0" />
-                <element signature="method#deleteSpesificUser#0;class#DatabaseConnection#0" />
-                <element signature="method#addProject#0;class#DatabaseConnection#0" />
-                <element signature="method#getAllProjects#0;class#DatabaseConnection#0" />
-                <element signature="method#getSpesificProject#0;class#DatabaseConnection#0" />
-                <element signature="method#deleteSpesificProject#0;class#DatabaseConnection#0" />
-                <element signature="method#updateTimeInProject#0;class#DatabaseConnection#0" />
-                <element signature="method#setEndDate#0;class#DatabaseConnection#0" />
-                <element signature="method#addTimeEntry#0;class#DatabaseConnection#0" />
-                <element signature="method#getAllTimeEntries#0;class#DatabaseConnection#0" />
-                <element signature="method#getTimeEntryByUser#0;class#DatabaseConnection#0" />
-                <element signature="method#getTimeEntryByProject#0;class#DatabaseConnection#0" />
-                <element signature="method#deleteTimeEntryByProject#0;class#DatabaseConnection#0" />
-                <element signature="method#checkIfUserInArray#0;class#DatabaseConnection#0" />
-                <element signature="method#checkIfProjectInArray#0;class#DatabaseConnection#0" />
-                <element signature="method#checkIfTimeEntryInArray#0;class#DatabaseConnection#0" />
-                <element signature="method#findProject#0;class#DatabaseConnection#0" />
-                <element signature="method#findUser#0;class#DatabaseConnection#0" />
-                <element signature="method#projectExists#0;class#DatabaseConnection#0" />
-                <element signature="method#userExists#0;class#DatabaseConnection#0" />
-                <element signature="method#gatherInfoFromDatabase#0;class#DatabaseConnection#0" />
-              </folding>
-            </state>
-          </provider>
         </entry>
       </file>
     </leaf>
@@ -149,16 +193,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/user.java" />
-        <option value="$PROJECT_DIR$/src/project.java" />
-        <option value="$PROJECT_DIR$/src/timeEntry.java" />
-        <option value="$PROJECT_DIR$/src/dbmodel/databaseConnection.java" />
-        <option value="$PROJECT_DIR$/src/app/loginPage.form" />
-        <option value="$PROJECT_DIR$/src/app/loginPage.java" />
-        <option value="$PROJECT_DIR$/src/app/controller/MainController.java" />
-        <option value="$PROJECT_DIR$/src/app/controller/checkPasswordListner.java" />
-        <option value="$PROJECT_DIR$/src/app/Runner.java" />
-        <option value="$PROJECT_DIR$/src/app/view/loginPage.java" />
         <option value="$PROJECT_DIR$/src/app/view/loginPage.form" />
         <option value="$PROJECT_DIR$/src/main.java" />
         <option value="$PROJECT_DIR$/src/app/main.java" />
@@ -192,11 +226,24 @@
         <option value="$PROJECT_DIR$/src/app/view/AdminPage.form" />
         <option value="$PROJECT_DIR$/src/app/view/admin/newUserPage.form" />
         <option value="$PROJECT_DIR$/src/app/view/admin/newUserPage.java" />
-        <option value="$PROJECT_DIR$/src/app/model/main.java" />
-        <option value="$PROJECT_DIR$/src/app/controller/AdminPageController.java" />
         <option value="$PROJECT_DIR$/src/app/controller/admin/newUserPageController.java" />
         <option value="$PROJECT_DIR$/src/app/controller/MainPageController.java" />
         <option value="$PROJECT_DIR$/src/app/model/DatabaseConnection.java" />
+        <option value="$PROJECT_DIR$/src/app/view/admin/newProjectPage.form" />
+        <option value="$PROJECT_DIR$/src/app/view/admin/newProjectPage.java" />
+        <option value="$PROJECT_DIR$/src/app/controller/admin/newProjectPageController.java" />
+        <option value="$PROJECT_DIR$/src/app/model/main.java" />
+        <option value="$PROJECT_DIR$/src/app/view/admin/editUserPage.form" />
+        <option value="$PROJECT_DIR$/src/app/view/admin/editUserPage.java" />
+        <option value="$PROJECT_DIR$/src/app/view/admin/EditUserPage.java" />
+        <option value="$PROJECT_DIR$/src/app/controller/admin/EditUserPageController.java" />
+        <option value="$PROJECT_DIR$/src/app/view/admin/EditProjectPage.form" />
+        <option value="$PROJECT_DIR$/src/app/view/admin/EditProjectPage.java" />
+        <option value="$PROJECT_DIR$/src/app/controller/admin/EditProjectPageController.java" />
+        <option value="$PROJECT_DIR$/src/app/view/admin/EditTimeEntryPage.form" />
+        <option value="$PROJECT_DIR$/src/app/view/admin/EditTimeEntryPage.java" />
+        <option value="$PROJECT_DIR$/src/app/controller/AdminPageController.java" />
+        <option value="$PROJECT_DIR$/src/app/controller/admin/EditTimeEntryPageController.java" />
       </list>
     </option>
   </component>
@@ -209,7 +256,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -269,8 +318,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -384,7 +431,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -395,13 +442,13 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.1641791" side_tool="true" weight="0.32897604" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.8358209" visible="true" weight="0.32897604" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.8358209" visible="true" weight="0.02991453" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49946696" weight="0.32897604" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18656716" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4968017" weight="0.32897604" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18590604" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4968017" weight="0.32827586" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -418,10 +465,10 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8358209" visible="true" weight="0.32897604" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8358209" visible="true" weight="0.32827586" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18656716" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18619792" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -429,7 +476,7 @@
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4968017" weight="0.32897604" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4968017" weight="0.32827586" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4989339" weight="0.39978212" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49946696" weight="0.32897604" />
@@ -448,7 +495,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="37" />
+      <option name="time" value="41" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -457,38 +504,17 @@
         <state relative-caret-position="425">
           <caret line="25" column="62" lean-forward="true" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
           <folding>
+            <element signature="method#fillDatabase#0;class#main#0" />
             <element signature="method#printAllInfo#0;class#main#0" />
             <element signature="method#randomWithinRange#0;class#main#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="244" column="18" selection-start-line="244" selection-start-column="18" selection-end-line="244" selection-end-column="18" />
-          <folding>
-            <element signature="e#10225#10226#0" expanded="true" />
-            <element signature="e#10308#10309#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.sql/java/sql/DriverManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="313" column="23" selection-start-line="313" selection-start-column="23" selection-end-line="313" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/Object.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.sql/java/sql/DriverManager.java" />
     <entry file="file://$PROJECT_DIR$/src/app/controller/checkPasswordListner.java" />
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/event/ActionListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/event/ActionListener.java" />
     <entry file="file://$PROJECT_DIR$/src/app/controller/MainPageController.form" />
     <entry file="file://$PROJECT_DIR$/src/app/view/LoginPage.form">
       <provider selected="true" editor-type-id="ui-designer" />
@@ -531,30 +557,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/model/TimeEntry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="68" column="29" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
-          <folding>
-            <element signature="method#toString#0;class#TimeEntry#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/model/Project.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="823">
-          <caret line="108" column="13" lean-forward="true" selection-start-line="108" selection-start-column="13" selection-end-line="108" selection-end-column="13" />
-          <folding>
-            <element signature="method#printTimeUsed#0;class#Project#0" />
-            <element signature="method#addToTimeList#0;class#Project#0" />
-            <element signature="method#printEndDate#0;class#Project#0" />
-            <element signature="method#addUserToUserList#0;class#Project#0" />
-            <element signature="method#toString#0;class#Project#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -625,13 +627,7 @@
     <entry file="file://$PROJECT_DIR$/src/app/view/SeeProjectPage.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/model/Runner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/model/Runner.java" />
     <entry file="file://$PROJECT_DIR$/src/app/model/Users.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -672,23 +668,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/javax/swing/JRootPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="597" selection-start-line="597" selection-end-line="597" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/javax/swing/JFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="678" selection-start-line="678" selection-end-line="678" />
-          <folding>
-            <element signature="e#24289#24290#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/javax/swing/JRootPane.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/javax/swing/JFrame.java" />
     <entry file="file://$PROJECT_DIR$/src/app/view/MainPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -706,58 +687,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/view/admin/editUserPage.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/view/admin/editUserPage.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/view/admin/editProjectPage.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/view/admin/editProjectPage.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/view/admin/newProjectPage.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/view/admin/newProjectPage.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/view/admin/changeTimeEntryPage.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/view/admin/changeTimeEntryPage.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controller/admin/changeTimeEntryPageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controller/admin/editProjectPageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controller/admin/editUserPageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controller/admin/newProjectPageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/view/AdminPage.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
@@ -771,58 +700,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controller/AdminPageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="74" column="62" selection-start-line="74" selection-start-column="62" selection-end-line="74" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#initComponents#0;class#AdminPageController#0" />
-            <element signature="method#initListeners#0;class#AdminPageController#0" />
-            <element signature="class#backButton#0;class#AdminPageController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/view/admin/newUserPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="12" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controller/admin/newUserPageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="687">
-          <caret line="70" column="56" lean-forward="true" selection-start-line="70" selection-start-column="56" selection-end-line="70" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#597#598#0" expanded="true" />
-            <element signature="e#623#624#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/model/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#fillDatabase#0;class#main#0" />
-            <element signature="method#printAllInfo#0;class#main#0" />
-            <element signature="method#randomWithinRange#0;class#main#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/view/admin/newUserPage.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/controller/MainPageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+        <state relative-caret-position="187">
+          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#closeMainPageController#0;class#MainPageController#0" />
@@ -840,8 +721,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/model/DatabaseConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="313" column="47" selection-start-line="313" selection-start-column="23" selection-end-line="313" selection-end-column="47" />
+        <state relative-caret-position="273">
+          <caret line="237" column="24" selection-start-line="237" selection-start-column="24" selection-end-line="237" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#addUser#0;class#DatabaseConnection#0" />
@@ -867,6 +748,289 @@
             <element signature="method#projectExists#0;class#DatabaseConnection#0" />
             <element signature="method#userExists#0;class#DatabaseConnection#0" />
             <element signature="method#gatherInfoFromDatabase#0;class#DatabaseConnection#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/view/admin/NewUserPage.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controller/admin/NewUserPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="70" column="56" selection-start-line="70" selection-start-column="56" selection-end-line="70" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/view/admin/NewProjectPage.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controller/admin/NewProjectPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1000">
+          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#725#726#0" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/view/admin/NewUserPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="18" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controller/admin/EditUserPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1632">
+          <caret line="96" column="41" lean-forward="true" selection-start-line="96" selection-start-column="41" selection-end-line="96" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#721#722#0" expanded="true" />
+            <element signature="e#754#755#0" expanded="true" />
+            <element signature="e#2348#2349#0" expanded="true" />
+            <element signature="e#2392#2393#0" expanded="true" />
+            <element signature="e#2544#2545#0" expanded="true" />
+            <element signature="e#2588#2589#0" expanded="true" />
+            <element signature="e#2892#2893#0" expanded="true" />
+            <element signature="e#2936#2937#0" expanded="true" />
+            <element signature="e#3095#3096#0" expanded="true" />
+            <element signature="e#3139#3140#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/view/admin/EditUserPage.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/view/admin/EditProjectPage.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/model/Project.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="9" selection-end-column="27" />
+          <folding>
+            <element signature="method#printTimeUsed#0;class#Project#0" />
+            <element signature="method#addToTimeList#0;class#Project#0" />
+            <element signature="method#printEndDate#0;class#Project#0" />
+            <element signature="method#addUserToUserList#0;class#Project#0" />
+            <element signature="method#toString#0;class#Project#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/model/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
+          <folding>
+            <element signature="method#fillDatabase#0;class#main#0" />
+            <element signature="method#printAllInfo#0;class#main#0" />
+            <element signature="method#randomWithinRange#0;class#main#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/view/admin/NewProjectPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="19" selection-end-column="48" />
+          <folding>
+            <element signature="e#610#611#0" expanded="true" />
+            <element signature="e#643#644#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/view/admin/EditProjectPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="17" selection-end-column="44" />
+          <folding>
+            <element signature="e#611#612#0" expanded="true" />
+            <element signature="e#639#640#0" expanded="true" />
+            <element signature="e#681#682#0" expanded="true" />
+            <element signature="e#715#716#0" expanded="true" />
+            <element signature="e#756#757#0" expanded="true" />
+            <element signature="e#792#793#0" expanded="true" />
+            <element signature="e#851#852#0" expanded="true" />
+            <element signature="e#901#902#0" expanded="true" />
+            <element signature="e#939#940#0" expanded="true" />
+            <element signature="e#972#973#0" expanded="true" />
+            <element signature="e#1025#1026#0" expanded="true" />
+            <element signature="e#1069#1070#0" expanded="true" />
+            <element signature="e#1108#1109#0" expanded="true" />
+            <element signature="e#1142#1143#0" expanded="true" />
+            <element signature="e#1197#1198#0" expanded="true" />
+            <element signature="e#1243#1244#0" expanded="true" />
+            <element signature="e#1288#1289#0" expanded="true" />
+            <element signature="e#1326#1327#0" expanded="true" />
+            <element signature="e#1391#1392#0" expanded="true" />
+            <element signature="e#1445#1446#0" expanded="true" />
+            <element signature="e#1483#1484#0" expanded="true" />
+            <element signature="e#1516#1517#0" expanded="true" />
+            <element signature="e#1569#1570#0" expanded="true" />
+            <element signature="e#1613#1614#0" expanded="true" />
+            <element signature="e#1653#1654#0" expanded="true" />
+            <element signature="e#1688#1689#0" expanded="true" />
+            <element signature="e#1745#1746#0" expanded="true" />
+            <element signature="e#1793#1794#0" expanded="true" />
+            <element signature="e#1840#1841#0" expanded="true" />
+            <element signature="e#1879#1880#0" expanded="true" />
+            <element signature="e#1947#1948#0" expanded="true" />
+            <element signature="e#2003#2004#0" expanded="true" />
+            <element signature="e#2047#2048#0" expanded="true" />
+            <element signature="e#2083#2084#0" expanded="true" />
+            <element signature="e#2145#2146#0" expanded="true" />
+            <element signature="e#2195#2196#0" expanded="true" />
+            <element signature="e#2243#2244#0" expanded="true" />
+            <element signature="e#2283#2284#0" expanded="true" />
+            <element signature="e#2353#2354#0" expanded="true" />
+            <element signature="e#2411#2412#0" expanded="true" />
+            <element signature="e#2460#2461#0" expanded="true" />
+            <element signature="e#2501#2502#0" expanded="true" />
+            <element signature="e#2573#2574#0" expanded="true" />
+            <element signature="e#2633#2634#0" expanded="true" />
+            <element signature="e#2684#2685#0" expanded="true" />
+            <element signature="e#2727#2728#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/model/TimeEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding>
+            <element signature="method#toString#0;class#TimeEntry#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/view/admin/EditTimeEntryPage.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controller/admin/EditProjectPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <folding>
+            <element signature="e#888#889#0" expanded="true" />
+            <element signature="e#913#914#0" expanded="true" />
+            <element signature="e#2646#2647#0" expanded="true" />
+            <element signature="e#2690#2691#0" expanded="true" />
+            <element signature="e#2593#2594#0" expanded="true" />
+            <element signature="e#2637#2638#0" expanded="true" />
+            <element signature="e#2466#2467#0" expanded="true" />
+            <element signature="e#2510#2511#0" expanded="true" />
+            <element signature="e#2658#2659#0" expanded="true" />
+            <element signature="e#2702#2703#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/view/admin/EditUserPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="22" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controller/AdminPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="88" column="59" selection-start-line="88" selection-start-column="59" selection-end-line="88" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#AdminPageController#0;class#AdminPageController#0" />
+            <element signature="method#closeAdminPageController#0;class#AdminPageController#0" />
+            <element signature="method#initComponents#0;class#AdminPageController#0" />
+            <element signature="method#initListeners#0;class#AdminPageController#0" />
+            <element signature="class#newProject#0;class#AdminPageController#0" />
+            <element signature="class#editProject#0;class#AdminPageController#0" />
+            <element signature="class#newUser#0;class#AdminPageController#0" />
+            <element signature="class#editUser#0;class#AdminPageController#0" />
+            <element signature="class#changeTimeEntry#0;class#AdminPageController#0" />
+            <element signature="class#backButton#0;class#AdminPageController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/view/admin/EditTimeEntryPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="39" column="39" lean-forward="true" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+          <folding>
+            <element signature="e#642#643#0" expanded="true" />
+            <element signature="e#670#671#0" expanded="true" />
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#746#747#0" expanded="true" />
+            <element signature="e#785#786#0" expanded="true" />
+            <element signature="e#819#820#0" expanded="true" />
+            <element signature="e#874#875#0" expanded="true" />
+            <element signature="e#920#921#0" expanded="true" />
+            <element signature="e#958#959#0" expanded="true" />
+            <element signature="e#991#992#0" expanded="true" />
+            <element signature="e#1044#1045#0" expanded="true" />
+            <element signature="e#1088#1089#0" expanded="true" />
+            <element signature="e#1129#1130#0" expanded="true" />
+            <element signature="e#1165#1166#0" expanded="true" />
+            <element signature="e#1224#1225#0" expanded="true" />
+            <element signature="e#1274#1275#0" expanded="true" />
+            <element signature="e#1321#1322#0" expanded="true" />
+            <element signature="e#1361#1362#0" expanded="true" />
+            <element signature="e#1430#1431#0" expanded="true" />
+            <element signature="e#1488#1489#0" expanded="true" />
+            <element signature="e#1526#1527#0" expanded="true" />
+            <element signature="e#1559#1560#0" expanded="true" />
+            <element signature="e#1612#1613#0" expanded="true" />
+            <element signature="e#1656#1657#0" expanded="true" />
+            <element signature="e#1696#1697#0" expanded="true" />
+            <element signature="e#1731#1732#0" expanded="true" />
+            <element signature="e#1788#1789#0" expanded="true" />
+            <element signature="e#1836#1837#0" expanded="true" />
+            <element signature="e#1896#1897#0" expanded="true" />
+            <element signature="e#1949#1950#0" expanded="true" />
+            <element signature="e#2185#2186#0" expanded="true" />
+            <element signature="e#2235#2236#0" expanded="true" />
+            <element signature="e#2450#2451#0" expanded="true" />
+            <element signature="e#2490#2491#0" expanded="true" />
+            <element signature="e#2560#2561#0" expanded="true" />
+            <element signature="e#2618#2619#0" expanded="true" />
+            <element signature="e#2669#2670#0" expanded="true" />
+            <element signature="e#2712#2713#0" expanded="true" />
+            <element signature="e#2901#2902#0" expanded="true" />
+            <element signature="e#2942#2943#0" expanded="true" />
+            <element signature="e#3014#3015#0" expanded="true" />
+            <element signature="e#3074#3075#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controller/admin/EditTimeEntryPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="62" column="53" selection-start-line="62" selection-start-column="53" selection-end-line="62" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#814#815#0" expanded="true" />
+            <element signature="e#846#847#0" expanded="true" />
+            <element signature="e#2833#2834#0" expanded="true" />
+            <element signature="e#2877#2878#0" expanded="true" />
+            <element signature="e#3015#3016#0" expanded="true" />
+            <element signature="e#3068#3069#0" expanded="true" />
+            <element signature="e#3204#3205#0" expanded="true" />
+            <element signature="e#3257#3258#0" expanded="true" />
+            <element signature="e#3399#3400#0" expanded="true" />
+            <element signature="e#3452#3453#0" expanded="true" />
           </folding>
         </state>
       </provider>

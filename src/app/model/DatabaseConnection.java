@@ -28,6 +28,7 @@ public class DatabaseConnection {
         }
         catch(SQLException ex){
             ex.printStackTrace();
+            System.out.println("You are not connected to the internet");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -54,6 +55,7 @@ public class DatabaseConnection {
                 }
         }catch (SQLException ex){
             ex.printStackTrace();
+            System.out.println("You are not connected to the internet");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -72,6 +74,7 @@ public class DatabaseConnection {
             }
         }catch (SQLException ex){
             ex.printStackTrace();
+            System.out.println("You are not connected to the internet");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -88,6 +91,7 @@ public class DatabaseConnection {
 
         }catch (SQLException ex){
             ex.printStackTrace();
+            System.out.println("You are not connected to the internet");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -106,6 +110,7 @@ public class DatabaseConnection {
 
         }catch (SQLException ex){
             ex.printStackTrace();
+            System.out.println("You are not connected to the internet");
         }catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -132,6 +137,7 @@ public class DatabaseConnection {
             }
         }catch (SQLException ex){
             ex.printStackTrace();
+            System.out.println("You are not connected to the internet");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -150,6 +156,7 @@ public class DatabaseConnection {
             }
         }catch (SQLException ex){
             ex.printStackTrace();
+            System.out.println("You are not connected to the internet");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -168,6 +175,7 @@ public class DatabaseConnection {
 
         }catch (SQLException ex){
             ex.printStackTrace();
+            System.out.println("You are not connected to the internet");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -182,6 +190,7 @@ public class DatabaseConnection {
             statement.executeUpdate(sqlStatement);
         }catch (SQLException ex){
             ex.printStackTrace();
+            System.out.println("You are not connected to the internet");
         }catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -220,6 +229,7 @@ public class DatabaseConnection {
 
         }catch (SQLException ex){
             ex.printStackTrace();
+            System.out.println("You are not connected to the internet");
         }catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -238,6 +248,7 @@ public class DatabaseConnection {
             updateTimeInProject(TimeEntry.getProject().getName());
         }catch (SQLException ex){
             ex.printStackTrace();
+            System.out.println("You are not connected to the internet");
         }catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -267,6 +278,7 @@ public class DatabaseConnection {
             }
         }catch (SQLException ex){
             ex.printStackTrace();
+            System.out.println("You are not connected to the internet");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -286,6 +298,7 @@ public class DatabaseConnection {
             }
         }catch (SQLException ex){
             ex.printStackTrace();
+            System.out.println("You are not connected to the internet");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -306,6 +319,7 @@ public class DatabaseConnection {
             return timeEntries;
         }catch (SQLException ex){
             ex.printStackTrace();
+            System.out.println("You are not connected to the internet");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -322,6 +336,7 @@ public class DatabaseConnection {
 
         }catch (SQLException ex){
             ex.printStackTrace();
+            System.out.println("You are not connected to the internet");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }

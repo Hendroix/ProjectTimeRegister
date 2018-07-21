@@ -2,7 +2,7 @@ package app.view.admin;
 
 import javax.swing.*;
 
-public class newUserPage extends JFrame{
+public class NewUserPage extends JFrame{
 
     private JPanel panel;
     private JButton backButton;
@@ -12,7 +12,7 @@ public class newUserPage extends JFrame{
     private JTextField lastNameComboBox;
     private JTextField userNameComboBox;
 
-    public newUserPage(){
+    public NewUserPage(){
         setSize(500,500);
         setContentPane(panel);
         setLocationRelativeTo(null);

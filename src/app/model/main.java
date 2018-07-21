@@ -1,8 +1,6 @@
 package app.model;
 
 import app.controller.AdminPageController;
-import app.controller.LoginPageController;
-import app.controller.MainPageController;
 
 public class main {
     public static Project testProject;
