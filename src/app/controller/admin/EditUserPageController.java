@@ -73,35 +73,69 @@ public class EditUserPageController {
     private class deleteSelectedButton implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
-            System.out.println("DELETING");
+            if (usersComboBox.getSelectedItem() != null) {
+                int dialogResults = JOptionPane.showConfirmDialog(null, "Are you sure you would like to delete USER: " + usersComboBox.getSelectedItem());
+                if (dialogResults == JOptionPane.YES_OPTION) {
+                    DatabaseConnection.deleteSpesificUser(((Users) usersComboBox.getSelectedItem()).getUserName());
+                    usersComboBox.removeItem(usersComboBox.getSelectedItem());
+                    clearTextFields();
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "Select an item from the comboBox");
+            }
         }
     }
 
     private class editSelectedButton implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
-            System.out.println("EDITING");
+            if(usersComboBox.getSelectedItem() != null) {
+                Users selectedUser = (Users) usersComboBox.getSelectedItem();
+                usernameTextField.setText(selectedUser.getUserName());
+                firstnameTextField.setText(selectedUser.getFirstName());
+                lastnameTextField.setText(selectedUser.getLastName());
+                passwordTextField.setText(selectedUser.getUserPass());
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Select an item from the comboBox");
+            }
         }
     }
 
     private class abortEditSelectedButton implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
-            System.out.println("ABORTING");
+            clearTextFields();
         }
     }
 
     private class confirmEditSelectedButton implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
-            System.out.println("CONFIRMING");
+            if(usersComboBox.getSelectedItem() != null){
+            int dialogResults = JOptionPane.showConfirmDialog(null, "Are you sure you would like to update the User: " + usersComboBox.getSelectedItem());
+            if(dialogResults == JOptionPane.YES_OPTION){
+                DatabaseConnection.updateUser(((Users) usersComboBox.getSelectedItem()).getUserName(), usernameTextField.getText(), firstnameTextField.getText(), lastnameTextField.getText(), passwordTextField.getText());
+                fillUsersComboBox();
+                }
+            }else{
+                JOptionPane.showMessageDialog(null,"Select an item from the comboBox");
+            }
         }
     }
 
     private void fillUsersComboBox(){
+        usersComboBox.removeAllItems();
         for (Users u: DatabaseConnection.getUsersList()
              ) {
                 usersComboBox.addItem(u);
         }
+    }
+
+    private void clearTextFields(){
+        usernameTextField.setText("");
+        firstnameTextField.setText("");
+        lastnameTextField.setText("");
+        passwordTextField.setText("");
     }
 }

@@ -61,6 +61,13 @@ public class LoginPageController {
             if(e.getKeyCode() == KeyEvent.VK_ESCAPE){
                 closeLoginWindow();
             }
+            if(e.isControlDown() && e.isShiftDown()){
+                if(e.getKeyCode() == KeyEvent.VK_ENTER){
+                    textFieldUserName.setText("Hendroix");
+                    textFieldPassWord.setText("1234");
+                    loginMethod();
+                }
+            }
         }
     }
 

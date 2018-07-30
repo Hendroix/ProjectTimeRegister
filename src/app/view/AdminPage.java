@@ -17,6 +17,8 @@ public class AdminPage extends JFrame{
         setContentPane(panel);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+        panel.setFocusable(true);
+        panel.requestFocusInWindow();
     }
 
     public JPanel getPanel() {

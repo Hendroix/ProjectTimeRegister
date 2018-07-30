@@ -6,6 +6,8 @@ import app.controller.admin.*;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class AdminPageController {
 
@@ -42,12 +44,42 @@ public class AdminPageController {
     }
 
     private void initListeners(){
+        adminPage.getPanel().addKeyListener(new keyListeners());
         newProjectButton.addActionListener(new newProject());
         editProjectButton.addActionListener(new editProject());
         newUserButton.addActionListener(new newUser());
         editUserButton.addActionListener(new editUser());
         changeTimeEntryButton.addActionListener(new changeTimeEntry());
         backButton.addActionListener(new backButton());
+    }
+
+    private class keyListeners extends KeyAdapter{
+        @Override
+        public void keyPressed(KeyEvent e) {
+
+            if(e.isControlDown()){
+                if(e.getKeyCode() == KeyEvent.VK_P){
+                    editProjectButton.doClick();
+                }
+                if(e.getKeyCode() == KeyEvent.VK_U){
+                    editUserButton.doClick();
+                }
+            }
+            else{
+                if(e.getKeyCode() == KeyEvent.VK_P){
+                    newProjectButton.doClick();
+                }
+                if(e.getKeyCode() == KeyEvent.VK_U){
+                    newUserButton.doClick();
+                }
+                if(e.getKeyCode() == KeyEvent.VK_T){
+                    changeTimeEntryButton.doClick();
+                }
+                if(e.getKeyCode() == KeyEvent.VK_B){
+                    backButton.doClick();
+                }
+            }
+        }
     }
 
     private class newProject implements ActionListener{

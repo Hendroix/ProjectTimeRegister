@@ -8,6 +8,8 @@ import app.view.MainPage;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class MainPageController {
 
@@ -54,23 +56,52 @@ public class MainPageController {
         newEntryButton = mainPage.getNewEntryButton();
         adminButton = mainPage.getAdminButton();
         if(main.logedInUser != null){
+            if(main.logedInUser.getUserName().equalsIgnoreCase("Hendroix")){
 
-            if(main.logedInUser.getUserName().equals("Hendroix")){
-                adminButton.setVisible(true);
+            }
+            else{
+                mainPage.remove(adminButton);
             }
         }
         else{
-            adminButton.setVisible(false);
+            mainPage.remove(adminButton);
         }
     }
 
     public void initListeners(){
+        mainPage.getMainJPanel().addKeyListener(new KeyListeners());
         usersButton.addActionListener(new gotoUsersPage());
         logoutButton.addActionListener(new logout());
         projectButton.addActionListener(new gotoProjectPage());
         timeEntryButton.addActionListener(new gotoTimeEntryPage());
         newEntryButton.addActionListener(new gotoNewEntryPage());
         adminButton.addActionListener(new adminPage());
+    }
+
+    private class KeyListeners extends KeyAdapter{
+        @Override
+        public void keyPressed(KeyEvent e) {
+            if(e.getKeyCode() == KeyEvent.VK_E || e.getKeyCode() == KeyEvent.VK_N){
+                newEntryButton.doClick();
+            }
+            if(e.getKeyCode() == KeyEvent.VK_T){
+                timeEntryButton.doClick();
+            }
+            if(e.getKeyCode() == KeyEvent.VK_P){
+                projectButton.doClick();
+            }
+            if(e.getKeyCode() == KeyEvent.VK_U){
+                usersButton.doClick();
+            }
+            if(e.getKeyCode() == KeyEvent.VK_L){
+                logoutButton.doClick();
+            }
+            if(e.getKeyCode() == KeyEvent.VK_A){
+                if(adminButton.isVisible()){
+                 adminButton.doClick();
+                }
+            }
+        }
     }
 
     private class gotoUsersPage implements ActionListener{
@@ -115,6 +146,7 @@ public class MainPageController {
         public void actionPerformed(ActionEvent e){
             LoginPageController loginPageController = new LoginPageController();
             loginPageController.showLoginPageWindow();
+            main.logedInUser = null;
             closeMainPageController();
         }
     }

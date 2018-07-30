@@ -17,6 +17,16 @@ public class MainPage extends JFrame{
         setContentPane(mainJPanel);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+        mainJPanel.setFocusable(true);
+        mainJPanel.requestFocusInWindow();
+    }
+
+    public JPanel getMainJPanel() {
+        return mainJPanel;
+    }
+
+    public void setMainJPanel(JPanel mainJPanel) {
+        this.mainJPanel = mainJPanel;
     }
 
     public JButton getUsersButton() {

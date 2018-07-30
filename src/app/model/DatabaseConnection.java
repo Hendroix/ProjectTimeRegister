@@ -23,7 +23,7 @@ public class DatabaseConnection {
             Statement statement = connection.createStatement();
 
             String sqlStatement = "INSERT INTO Users VALUES('" + Users.getUserName() + "','" + Users.getUserPass() +"','" + Users.getFirstName() + "','" + Users.getLastName()+ "')";
-            //System.out.println("The Querry is:" + sqlStatement);
+            USERS_LIST.add(Users);
             statement.executeUpdate(sqlStatement);
         }
         catch(SQLException ex){
@@ -66,7 +66,7 @@ public class DatabaseConnection {
             Connection connection = DriverManager.getConnection(url, username, passowrd);
             Statement statement = connection.createStatement();
 
-            String sqlStatement = "SELECT * FROM users WHERE userName ='" + userName + "'";
+            String sqlStatement = "SELECT * FROM Users WHERE userName ='" + userName + "'";
             ResultSet resultSet = statement.executeQuery(sqlStatement);
             while(resultSet.next()){
                 System.out.println(resultSet.getString(1) + ", " + "####" + ", " + resultSet.getString(3)
@@ -80,14 +80,32 @@ public class DatabaseConnection {
         }
         return null;
     }
+    public static void updateUser(String originalUserName, String newUserName, String newFirstName, String newLastName, String newPassword){
+        try {
+            Class.forName(DRIVER);
+            Connection connection = DriverManager.getConnection(url, username, passowrd);
+            Statement statement = connection.createStatement();
+
+            String sqlStatement = "UPDATE Users SET userName ='" + newUserName + "', userPass ='" + newPassword + "', firstName ='" + newFirstName + "', lastName ='" + newLastName + "' WHERE userName = '" + originalUserName + "'";
+            statement.executeUpdate(sqlStatement);
+            USERS_LIST.remove(findUser(originalUserName));
+            USERS_LIST.add(new Users(newUserName, newPassword, newFirstName, newLastName));
+        }catch (SQLException ex){
+            ex.printStackTrace();
+            System.out.println("You are not connected to the internet");
+        }catch (ClassNotFoundException e){
+            e.printStackTrace();
+        }
+    }
     public static void deleteSpesificUser(String userName){
         try{
            Class.forName(DRIVER);
            Connection connection = DriverManager.getConnection(url, username, passowrd);
            Statement statement = connection.createStatement();
 
-           String sqlStatement = "DELETE FROM users WHERE userName ='" + userName + "'";
+           String sqlStatement = "DELETE FROM Users WHERE userName ='" + userName + "'";
            int resultSet = statement.executeUpdate(sqlStatement);
+           USERS_LIST.remove(findUser(userName));
 
         }catch (SQLException ex){
             ex.printStackTrace();
@@ -107,6 +125,7 @@ public class DatabaseConnection {
             String sqlStatement = "INSERT INTO Project VALUES('" + Project.getName() + "','" + Project.getDescription() +
                     "','" + Project.getTimeUsed() + "','" + Project.getStartDate() +"','" + Project.getEndDate() + "')";
             statement.executeUpdate(sqlStatement);
+            PROJECT_LIST.add(Project);
 
         }catch (SQLException ex){
             ex.printStackTrace();

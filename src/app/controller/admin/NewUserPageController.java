@@ -1,6 +1,7 @@
 package app.controller.admin;
 
 import app.controller.AdminPageController;
+import app.model.DatabaseConnection;
 import app.model.Users;
 import app.view.admin.*;
 import javax.swing.*;
@@ -67,8 +68,8 @@ public class NewUserPageController {
                         if(checkInfoFrompasswordComboBox()){
                             String password = passwordComboBox.getText();
                             Users newUser = new Users(userName,firstName,lastName,password);
-                            System.out.println(newUser);
-                            //DatabaseConnection.addUser(newUser);
+                            DatabaseConnection.addUser(newUser);
+                            backButton.doClick();
                         }
                     }
                 }

@@ -50,6 +50,7 @@ public class EditProjectPageController {
         enddateTextField = editProjectPage.getEnddateTextField();
         nameTextField = editProjectPage.getNameTextField();
         timeusedTextField = editProjectPage.getTimeusedTextField();
+        timeusedTextField.setEditable(false);
         startdateTextField = editProjectPage.getStartdateTextField();
         descriptionTextField = editProjectPage.getDescriptionTextField();
     }
@@ -89,14 +90,20 @@ public class EditProjectPageController {
     private class abortButton implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
-            System.out.println("ABORTING");
+            clearTextFields();
         }
     }
 
     private class editButton implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
-            System.out.println("EDITING");
+            Project selectedProject = DatabaseConnection.findProject(projectComboBox.getSelectedItem().toString());
+            nameTextField.setText(selectedProject.getName());
+            timeusedTextField.setText(""+selectedProject.getTimeUsed());
+            startdateTextField.setText(selectedProject.getStartDate());
+            descriptionTextField.setText(selectedProject.getDescription());
+            enddateTextField.setText(selectedProject.getEndDate());
+
         }
     }
 
@@ -105,5 +112,13 @@ public class EditProjectPageController {
              ) {
                 projectComboBox.addItem(p.getName());
         }
+    }
+
+    private void clearTextFields(){
+        enddateTextField.setText("");
+        nameTextField.setText("");
+        timeusedTextField.setText("");
+        startdateTextField.setText("");
+        descriptionTextField.setText("");
     }
 }
