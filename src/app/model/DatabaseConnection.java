@@ -1,9 +1,8 @@
 package app.model;
 
 import java.sql.*;
-import java.time.LocalDate;
-import java.time.ZoneId;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class DatabaseConnection {
     static final String DRIVER = "com.mysql.jdbc.Driver";
@@ -146,7 +145,7 @@ public class DatabaseConnection {
             String sqlStatement = "SELECT * FROM Project";
             ResultSet resultSet = statement.executeQuery(sqlStatement);
             while(resultSet.next()){
-                Project tmp = new Project(resultSet.getString(1), resultSet.getString(1), resultSet.getDouble(3),(resultSet.getString(4)),(resultSet.getString(5)));
+                Project tmp = new Project(resultSet.getString(1), resultSet.getString(2), resultSet.getDouble(3),(resultSet.getString(4)),(resultSet.getString(5)));
                 if(checkIfProjectInArray(tmp)){
                     PROJECT_LIST.add(tmp);
                 }
@@ -170,8 +169,8 @@ public class DatabaseConnection {
             String sqlStatement = "SELECT * FROM Project WHERE projectName = '" + projectName + "'";
             ResultSet resultSet = statement.executeQuery(sqlStatement);
             while(resultSet.next()){
-                System.out.println(resultSet.getString(1) + ", " + resultSet.getString(2) + " " + resultSet.getDouble(3)
-                        + ", " + resultSet.getString(4) + ", " + resultSet.getString(5));
+                Project tmp = new Project(resultSet.getString(1), resultSet.getString(2), resultSet.getDouble(3),(resultSet.getString(4)),(resultSet.getString(5)));
+                return tmp;
             }
         }catch (SQLException ex){
             ex.printStackTrace();
@@ -188,9 +187,9 @@ public class DatabaseConnection {
             Connection connection = DriverManager.getConnection(url, username, passowrd);
             Statement statement = connection.createStatement();
 
-            String sqlStatement = "DELETE FROM Project WHERE userName ='" + projectName + "'";
+            String sqlStatement = "DELETE FROM Project WHERE projectName ='" + projectName + "'";
             int resultSet = statement.executeUpdate(sqlStatement);
-            deleteTimeEntryByProject(projectName);
+            PROJECT_LIST.remove(findProject(projectName));
 
         }catch (SQLException ex){
             ex.printStackTrace();
@@ -207,45 +206,7 @@ public class DatabaseConnection {
 
             String sqlStatement = "UPDATE Project set timeUsed = (SELECT SUM(timeUsed) FROM TimeEntry WHERE projectName = '" + projectName + "') WHERE projectName = '" + projectName + "'";
             statement.executeUpdate(sqlStatement);
-        }catch (SQLException ex){
-            ex.printStackTrace();
-            System.out.println("You are not connected to the internet");
-        }catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
-    public static void setEndDate(String projectName, Date endDate){
-        String endDateString;
-        if(endDate != null){
-            LocalDate localDate = endDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-            int year = localDate.getYear();
-            int month = localDate.getMonthValue();
-            String monthString;
-            String dayString;
-            if(month < 10){
-                monthString = "0" + month;
-            }else{
-                monthString = "" + month;
-            }
-            int day = localDate.getDayOfMonth();
-            if(day < 10){
-                dayString = "0" + day;
-            }else{
-                dayString = "" + day;
-            }
-            endDateString = year + "-" + monthString + "-" + dayString;
-        }else{
-            endDateString = "2000-01-01";
-        }
-        try{
-            Class.forName(DRIVER);
-            Connection connection = DriverManager.getConnection(url, username, passowrd);
-            Statement statement = connection.createStatement();
-
-            String sqlStatement = "UPDATE Project set dateEnded = '" + endDateString + "') WHERE projectName = '" + projectName + "'";
-            //System.out.println("The Querry is:" + sqlStatement);
-            statement.executeUpdate(sqlStatement);
-
+            updateProjectTimeUsedSum(projectName);
         }catch (SQLException ex){
             ex.printStackTrace();
             System.out.println("You are not connected to the internet");
@@ -309,7 +270,6 @@ public class DatabaseConnection {
             Statement statement = connection.createStatement();
 
             String sqlStatement = "SELECT * FROM TimeEntry WHERE userName ='" + userName + "'";
-            //System.out.println(sqlStatement);
             ResultSet resultSet = statement.executeQuery(sqlStatement);
             while(resultSet.next()){
                 System.out.println(resultSet.getInt(1) + ", " + resultSet.getString(2) + ", " + resultSet.getDouble(3)
@@ -350,8 +310,10 @@ public class DatabaseConnection {
             Connection connection = DriverManager.getConnection(url, username, passowrd);
             Statement statement = connection.createStatement();
 
-            String sqlStatement = "DELETE FROM TimeEntry WHERE userName ='" + projectName + "'";
+            String sqlStatement = "DELETE FROM TimeEntry WHERE projectName ='" + projectName + "'";
             int resultSet = statement.executeUpdate(sqlStatement);
+            removeTimeEntrieFromListByProject(projectName);
+            deleteSpesificProject(projectName);
 
         }catch (SQLException ex){
             ex.printStackTrace();
@@ -439,5 +401,23 @@ public class DatabaseConnection {
         getAllProjects(print);
         getAllUsers(print);
         getAllTimeEntries(print);
+    }
+
+    private static void removeTimeEntrieFromListByProject(String projectName){
+        Iterator<TimeEntry> iter = TIME_ENTRY_LIST.iterator();
+
+        while (iter.hasNext()) {
+            TimeEntry checkTimeEntry = iter.next();
+
+            if(checkTimeEntry.getProject().getName().equals(projectName)){
+                iter.remove();
+            }
+        }
+    }
+
+    private static void updateProjectTimeUsedSum(String projectName){
+        Project replaceAbleProject = getSpesificProject(projectName);
+        PROJECT_LIST.add(replaceAbleProject);
+        PROJECT_LIST.remove(findProject(projectName));
     }
 }

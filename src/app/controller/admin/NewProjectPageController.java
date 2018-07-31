@@ -87,9 +87,9 @@ public class NewProjectPageController {
                             if (endDateTextField != null && checkDateEnded()) {
                                 String dateEnded = endDateTextField.getText();
                                 Project newProject = new Project(projectName, projectDescription, timeUsed, dateStarted, dateEnded);
-                                System.out.println(newProject);
                                 if(DatabaseConnection.checkIfProjectInArray(newProject)){
                                     DatabaseConnection.addProject(newProject);
+                                    clearTextFields();
                                 }
                             }
                         }
@@ -147,6 +147,12 @@ public class NewProjectPageController {
         timeUsedTextField.setEditable(false);
         endDateTextField.setEditable(false);
 
+    }
+
+    private void clearTextFields(){
+    nameTextField.setText("");
+    timeUsedTextField.setText("0.00");
+    descriptionTextField.setText("");
     }
 
 

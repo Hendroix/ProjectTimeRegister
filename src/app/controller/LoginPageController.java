@@ -14,10 +14,21 @@ public class LoginPageController {
     private JTextField textFieldUserName;
     private JPasswordField textFieldPassWord;
     private JLabel labelUserFeedBack;
+    private boolean consolePrint = false;
+    private static boolean firstLoad = true;
 
     public LoginPageController() {
         initComponents();
         initListeners();
+
+        if(firstLoad){
+            System.out.println("Getting information from the database...");
+            DatabaseConnection.gatherInfoFromDatabase(consolePrint);
+            System.out.println("TimeEntries:    " + DatabaseConnection.getTimeEntryList().size());
+            System.out.println("Projects:       " + DatabaseConnection.getProjectList().size());
+            System.out.println("Users:          " + DatabaseConnection.getUsersList().size());
+            firstLoad = false;
+        }
     }
 
     public void showLoginPageWindow() {

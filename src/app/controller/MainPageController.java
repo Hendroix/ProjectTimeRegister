@@ -20,21 +20,11 @@ public class MainPageController {
     private JButton timeEntryButton;
     private JButton newEntryButton;
     private JButton adminButton;
-    private boolean consolePrint = false;
-    private static boolean firstLoad = true;
 
     public MainPageController(){
         initComponents();
         initListeners();
 
-        if(firstLoad){
-            System.out.println("Getting information from the database...");
-            DatabaseConnection.gatherInfoFromDatabase(consolePrint);
-            System.out.println("TimeEntries:    " + DatabaseConnection.getTimeEntryList().size());
-            System.out.println("Projects:       " + DatabaseConnection.getProjectList().size());
-            System.out.println("Users:          " + DatabaseConnection.getUsersList().size());
-            firstLoad = false;
-        }
     }
 
     public void showMainPageController(){

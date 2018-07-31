@@ -83,7 +83,16 @@ public class EditProjectPageController {
     private class deleteButton implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
-            System.out.println("DELETING");
+            if (projectComboBox.getSelectedItem() != null) {
+                int dialogResults = JOptionPane.showConfirmDialog(null, "Are you sure you would like to delete Project: " + projectComboBox.getSelectedItem() + ". This will also remove all the timeentries for this project. ");
+                if (dialogResults == JOptionPane.YES_OPTION) {
+                    DatabaseConnection.deleteTimeEntryByProject(DatabaseConnection.findProject(projectComboBox.getSelectedItem().toString()).getName());
+                    projectComboBox.removeItem(projectComboBox.getSelectedItem());
+                    clearTextFields();
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "Select an item from the comboBox");
+            }
         }
     }
 

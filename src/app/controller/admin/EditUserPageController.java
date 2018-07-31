@@ -112,7 +112,7 @@ public class EditUserPageController {
     private class confirmEditSelectedButton implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
-            if(usersComboBox.getSelectedItem() != null){
+            if(usersComboBox.getSelectedItem() != null && !usernameTextField.getText().isEmpty() && !firstnameTextField.getText().isEmpty() && !lastnameTextField.getText().isEmpty() && !passwordTextField.getText().isEmpty()){
             int dialogResults = JOptionPane.showConfirmDialog(null, "Are you sure you would like to update the User: " + usersComboBox.getSelectedItem());
             if(dialogResults == JOptionPane.YES_OPTION){
                 DatabaseConnection.updateUser(((Users) usersComboBox.getSelectedItem()).getUserName(), usernameTextField.getText(), firstnameTextField.getText(), lastnameTextField.getText(), passwordTextField.getText());

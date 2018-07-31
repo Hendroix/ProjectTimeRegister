@@ -1,6 +1,6 @@
 package app.model;
 
-import app.controller.AdminPageController;
+import app.controller.LoginPageController;
 
 public class main {
     public static Project testProject;
@@ -10,11 +10,8 @@ public class main {
         //fillDatabase();
         //printAllInfo();
 
-        AdminPageController adminPageController = new AdminPageController();
-        adminPageController.showAdminPageController();
-
-        //LoginPageController loginPageController = new LoginPageController();
-        //loginPageController.showLoginPageWindow();
+        LoginPageController loginPageController = new LoginPageController();
+        loginPageController.showLoginPageWindow();
 
     }
 

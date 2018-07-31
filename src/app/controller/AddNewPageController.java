@@ -133,7 +133,11 @@ public class AddNewPageController {
                     if(checkTimeUsed(timeUsedTextField.getText())){
                         Double timeUsed = correctTimeUsed(timeUsedTextField.getText());
                         String description = checkDescription(descriptionTextField.getText());
-                        DatabaseConnection.addTimeEntry(new TimeEntry(0,timeEntryProject, timeUsed, description, date, timeEntryUser));
+                        TimeEntry newTimeEntry = new TimeEntry(0,timeEntryProject, timeUsed, description, date, timeEntryUser);
+                        DatabaseConnection.addTimeEntry(newTimeEntry);
+                        DatabaseConnection.getTimeEntryList().add(newTimeEntry);
+                        clearTextFields();
+
                     }
                     else{
                         JOptionPane.showMessageDialog(addNewPage, "Invalid Time entered, need to be a number or number followed by descimal: 'XX' or 'XX.X'");
@@ -158,7 +162,7 @@ public class AddNewPageController {
             int year = Integer.parseInt(inputArray[0]);
             int month = Integer.parseInt(inputArray[1]);
             int day = Integer.parseInt(inputArray[2]);
-            if(year > 1900 && month > 0 && month <= 12 && day > 0 && day < 31){
+            if(year > 1900 && month > 0 && month <= 12 && day > 0 && day <= 31){
                 return true;
             }
         }
@@ -205,6 +209,13 @@ public class AddNewPageController {
             return "Ingen beskrivelse lagt til.";
         }
         return input;
+    }
+
+    private void clearTextFields(){
+        descriptionTextField.setText("");
+        setCurrentDate();
+        timeUsedTextField.setText("");
+        userComboBox.setSelectedIndex(0);
     }
 
 }
