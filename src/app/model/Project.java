@@ -106,9 +106,13 @@ public class Project {
         }
     }
 
+    public String completeToString(){
+        return "Prosjekt: " + name + ". Tid brukt: " + printTimeUsed() + ". Startet " + startDate + ". " + printEndDate() + ". Antall loggninger: " + timeList.size() +
+                ", av " + usersList.size() + " person(er).";
+    }
+
     @Override
     public String toString() {
-        return "Prosjekt: '" + name + "'. Tid brukt: " + printTimeUsed() + ". Startet " + startDate + ". " + printEndDate() + ". Antall loggninger: " + timeList.size() +
-                ", av " + usersList.size() + " person(er).";
+        return name;
     }
 }

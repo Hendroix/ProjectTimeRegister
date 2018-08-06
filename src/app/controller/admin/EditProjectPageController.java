@@ -8,6 +8,9 @@ import app.view.admin.EditProjectPage;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 public class EditProjectPageController {
 
@@ -23,6 +26,7 @@ public class EditProjectPageController {
     private JTextField timeusedTextField;
     private JTextField startdateTextField;
     private JTextField descriptionTextField;
+    private String selectedProjectNameFromComboBox;
 
     public EditProjectPageController(){
         initComponents();
@@ -49,6 +53,7 @@ public class EditProjectPageController {
         deleteButton = editProjectPage.getDeleteButton();
         enddateTextField = editProjectPage.getEnddateTextField();
         nameTextField = editProjectPage.getNameTextField();
+        nameTextField.setEditable(false);
         timeusedTextField = editProjectPage.getTimeusedTextField();
         timeusedTextField.setEditable(false);
         startdateTextField = editProjectPage.getStartdateTextField();
@@ -76,7 +81,38 @@ public class EditProjectPageController {
     private class confirmButton implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
-            System.out.println("CONFIRMING");
+            if(!nameTextField.getText().isEmpty()){
+                String projectName = nameTextField.getText();
+                if(!timeusedTextField.getText().isEmpty() && checkTimeUsed()){
+                    Double timeUsed = Double.parseDouble(timeusedTextField.getText());
+                    if(!startdateTextField.getText().isEmpty() && checkDate(startdateTextField.getText())){
+                        String startDate = startdateTextField.getText();
+                        if(!descriptionTextField.getText().isEmpty()){
+                            String projectDescription = descriptionTextField.getText();
+                            if(!enddateTextField.getText().isEmpty() && checkDate(enddateTextField.getText())){
+                                String endDate = enddateTextField.getText();
+                                Project updatedProject = new Project(projectName, projectDescription, timeUsed, startDate, endDate);
+                                String oldProjectName = selectedProjectNameFromComboBox;
+                                System.out.println(updatedProject);
+                                int dialogResults = JOptionPane.showConfirmDialog(null, "Are you sure you would like to update the User: " + projectComboBox.getSelectedItem());
+                                if(JOptionPane.YES_OPTION == dialogResults){
+                                    DatabaseConnection.updateProject(updatedProject, oldProjectName);
+                                }
+                            }else{
+                                JOptionPane.showMessageDialog(null,"Incorrect format for end date. Please enter in YYYY-MM-DD.");
+                            }
+                        }else{
+                            JOptionPane.showMessageDialog(null,"Please enter a description.");
+                        }
+                    }else{
+                        JOptionPane.showMessageDialog(null,"Incorrect format for start date. Please enter in YYYY-MM-DD.");
+                    }
+                }else{
+                    JOptionPane.showMessageDialog(null,"Time used in either not a number or you used a comma(,). Should be in 'X.XX' format.");
+                }
+            }else{
+                JOptionPane.showMessageDialog(null,"Please enter a projcet name.");
+            }
         }
     }
 
@@ -108,6 +144,7 @@ public class EditProjectPageController {
         public void actionPerformed(ActionEvent e) {
             Project selectedProject = DatabaseConnection.findProject(projectComboBox.getSelectedItem().toString());
             nameTextField.setText(selectedProject.getName());
+            selectedProjectNameFromComboBox = selectedProject.getName();
             timeusedTextField.setText(""+selectedProject.getTimeUsed());
             startdateTextField.setText(selectedProject.getStartDate());
             descriptionTextField.setText(selectedProject.getDescription());
@@ -129,5 +166,27 @@ public class EditProjectPageController {
         timeusedTextField.setText("");
         startdateTextField.setText("");
         descriptionTextField.setText("");
+    }
+
+    private boolean checkTimeUsed(){
+        try{
+            Double.parseDouble(timeusedTextField.getText());
+            return true;
+        }catch (NumberFormatException ex){
+            ex.printStackTrace();
+            return false;
+        }
+    }
+
+    private boolean checkDate(String checkText){
+        try{
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
+        dateFormat.setLenient(false);
+        dateFormat.parse(checkText);
+        return true;
+    }catch (ParseException e){
+
+        return false;
+    }
     }
 }

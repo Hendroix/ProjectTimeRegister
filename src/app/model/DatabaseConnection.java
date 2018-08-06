@@ -59,26 +59,6 @@ public class DatabaseConnection {
             e.printStackTrace();
         }
     }
-    public static Users getSpesificUser(String userName){
-        try {
-            Class.forName(DRIVER);
-            Connection connection = DriverManager.getConnection(url, username, passowrd);
-            Statement statement = connection.createStatement();
-
-            String sqlStatement = "SELECT * FROM Users WHERE userName ='" + userName + "'";
-            ResultSet resultSet = statement.executeQuery(sqlStatement);
-            while(resultSet.next()){
-                System.out.println(resultSet.getString(1) + ", " + "####" + ", " + resultSet.getString(3)
-                        + ", " + resultSet.getString(4));
-            }
-        }catch (SQLException ex){
-            ex.printStackTrace();
-            System.out.println("You are not connected to the internet");
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
     public static void updateUser(String originalUserName, String newUserName, String newFirstName, String newLastName, String newPassword){
         try {
             Class.forName(DRIVER);
@@ -198,6 +178,24 @@ public class DatabaseConnection {
             e.printStackTrace();
         }
     }
+    public static void updateProject(Project project, String oldProjectName){
+        try {
+            Class.forName(DRIVER);
+            Connection connection = DriverManager.getConnection(url, username, passowrd);
+            Statement statement = connection.createStatement();
+
+            String sqlStatement = "UPDATE Project SET projectName ='" + project.getName() + "', projectDescription ='" + project.getDescription() +
+                    "', timeUsed ='" + project.getTimeUsed() + "', dateStarted ='" + project.getStartDate() + "', dateEnded ='" + project.getEndDate() +"' WHERE projectName = '" + oldProjectName + "'";
+            statement.executeUpdate(sqlStatement);
+            PROJECT_LIST.remove(findProject(oldProjectName));
+            PROJECT_LIST.add(project);
+        }catch (SQLException ex){
+            ex.printStackTrace();
+            System.out.println("You are not connected to the internet");
+        }catch (ClassNotFoundException e){
+            e.printStackTrace();
+        }
+    }
     public static void updateTimeInProject(String projectName){
         try{
             Class.forName(DRIVER);
@@ -263,25 +261,6 @@ public class DatabaseConnection {
             e.printStackTrace();
         }
     }
-    public static void getTimeEntryByUser(String userName){
-        try {
-            Class.forName(DRIVER);
-            Connection connection = DriverManager.getConnection(url, username, passowrd);
-            Statement statement = connection.createStatement();
-
-            String sqlStatement = "SELECT * FROM TimeEntry WHERE userName ='" + userName + "'";
-            ResultSet resultSet = statement.executeQuery(sqlStatement);
-            while(resultSet.next()){
-                System.out.println(resultSet.getInt(1) + ", " + resultSet.getString(2) + ", " + resultSet.getDouble(3)
-                        + ", " + resultSet.getString(4) + " " + resultSet.getString(5) + ", " + resultSet.getString(6));
-            }
-        }catch (SQLException ex){
-            ex.printStackTrace();
-            System.out.println("You are not connected to the internet");
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
     public static ArrayList<TimeEntry> getTimeEntryByProject(String projectName){
         ArrayList<TimeEntry> timeEntries = new ArrayList<>();
         try {
@@ -303,6 +282,41 @@ public class DatabaseConnection {
             e.printStackTrace();
         }
         return timeEntries;
+    }
+    public static void updateTimeEntry(TimeEntry timeEntry){
+        try {
+        Class.forName(DRIVER);
+        Connection connection = DriverManager.getConnection(url, username, passowrd);
+        Statement statement = connection.createStatement();
+
+        String sqlStatement = "UPDATE TimeEntry SET projectName ='" + timeEntry.getProject().getName()+ "', timeUsed ='" + timeEntry.getTimeUsed() +
+                "', description ='" + timeEntry.getDescription() + "', dateAdded ='" + timeEntry.getDateAdded() + "', userName ='" + timeEntry.getUsers().getUserName() +"' WHERE entryID = '" + timeEntry.getEntryID() + "'";
+        statement.executeUpdate(sqlStatement);
+        TIME_ENTRY_LIST.remove(findTimeEntry(timeEntry.getEntryID()));
+        TIME_ENTRY_LIST.add(timeEntry);
+    }catch (SQLException ex){
+        ex.printStackTrace();
+        System.out.println("You are not connected to the internet");
+    }catch (ClassNotFoundException e){
+        e.printStackTrace();
+    }
+    }
+    public static void deleteTimeEntry(int entryID){
+        try{
+            Class.forName(DRIVER);
+            Connection connection = DriverManager.getConnection(url, username, passowrd);
+            Statement statement = connection.createStatement();
+
+            String sqlStatement = "DELETE FROM TimeEntry WHERE entryID ='" + entryID + "'";
+            int resultSet = statement.executeUpdate(sqlStatement);
+            TIME_ENTRY_LIST.remove(findTimeEntry(entryID));
+
+        }catch (SQLException ex){
+            ex.printStackTrace();
+            System.out.println("You are not connected to the internet");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
     public static void deleteTimeEntryByProject(String projectName){
         try{
@@ -351,17 +365,28 @@ public class DatabaseConnection {
 
     //Useful methods
     public static Project findProject(String projectName){
-        for(int i = 0; i < PROJECT_LIST.size(); i++){
-            if(projectName.equals(PROJECT_LIST.get(i).getName())){
-                return PROJECT_LIST.get(i);
+        for (Project p: PROJECT_LIST
+             ) {
+            if(projectName.equals(p.getName())){
+                return p;
             }
         }
         return null;
     }
     public static Users findUser(String userName){
-        for(int i = 0; i < USERS_LIST.size(); i++){
-            if(userName.equals(USERS_LIST.get(i).getUserName())){
-                return USERS_LIST.get(i);
+        for (Users u: USERS_LIST
+             ) {
+            if(userName.equals(u.getUserName())){
+                return u;
+            }
+        }
+        return null;
+    }
+    public static TimeEntry findTimeEntry(int entryID){
+        for (TimeEntry te: TIME_ENTRY_LIST
+             ) {
+            if(entryID == te.getEntryID()){
+                return te;
             }
         }
         return null;

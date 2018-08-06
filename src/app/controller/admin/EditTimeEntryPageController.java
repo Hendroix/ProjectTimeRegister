@@ -2,7 +2,9 @@ package app.controller.admin;
 
 import app.controller.AdminPageController;
 import app.model.DatabaseConnection;
+import app.model.Project;
 import app.model.TimeEntry;
+import app.model.Users;
 import app.view.admin.EditTimeEntryPage;
 
 import javax.swing.*;
@@ -27,7 +29,7 @@ public class EditTimeEntryPageController {
     public EditTimeEntryPageController(){
         initComponents();
         initListeners();
-        fillTimeEntryComboBox();
+        fillComboBoxes();
         editTimeEntryPage.setSize(1000,500);
     }
 
@@ -63,13 +65,6 @@ public class EditTimeEntryPageController {
         editButton.addActionListener(new editButton());
     }
 
-    private void fillTimeEntryComboBox(){
-        for (TimeEntry te: DatabaseConnection.getTimeEntryList()
-             ) {
-            timeEntryComboBox.addItem(te);
-        }
-    }
-
     private class backButton implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -82,29 +77,111 @@ public class EditTimeEntryPageController {
     private class editButton implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
-            System.out.println("EDITING");
+            TimeEntry selectedTimEntry = (TimeEntry) timeEntryComboBox.getSelectedItem();
+            projectInTimeEntryEditComboBox.setSelectedItem(selectedTimEntry.getProject());
+            userInTimeEntryEditComboBox.setSelectedItem(selectedTimEntry.getUsers());
+            timeUsedTextField.setText("" + selectedTimEntry.getTimeUsed());
+            descriptionTextField.setText(selectedTimEntry.getDescription());
+            dateAddedTextField.setText(selectedTimEntry.getDateAdded());
         }
     }
 
     private class deleteButton implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
-            System.out.println("DELETING");
+            if(timeEntryComboBox.getSelectedItem() != null){
+                int dialogResults = JOptionPane.showConfirmDialog(null, "Are you sure you would like to delete TimeEntry: " + timeEntryComboBox.getSelectedItem());
+                if(dialogResults == JOptionPane.YES_OPTION){
+                    DatabaseConnection.deleteTimeEntry(((TimeEntry)timeEntryComboBox.getSelectedItem()).getEntryID());
+                    fillComboBoxes();
+                    clearTextFields();
+                }
+            }
         }
     }
 
     private class confirmButton implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
-            System.out.println("CONFIRMING");
+            if(!dateAddedTextField.getText().isEmpty()  && !descriptionTextField.getText().isEmpty() && !timeUsedTextField.getText().isEmpty()){
+                TimeEntry selectedTimeEntry = (TimeEntry) timeEntryComboBox.getSelectedItem();
+                Project newProject = (Project) projectInTimeEntryEditComboBox.getSelectedItem();
+                Double newTimeUsed = Double.parseDouble(timeUsedTextField.getText());
+                String newDescription = descriptionTextField.getText();
+                String newDateAdded = dateAddedTextField.getText();
+                Users newUser = (Users)userInTimeEntryEditComboBox.getSelectedItem();
+                TimeEntry updatedTimeEntry = new TimeEntry(selectedTimeEntry.getEntryID(),newProject,newTimeUsed,newDescription,newDateAdded, newUser);
+                String msgString = "Are you sure you want to update this TimeEntry?" + '\n';
+                Boolean edited = false;
+
+                if(selectedTimeEntry.getProject() != newProject){
+                    msgString += selectedTimeEntry.getProject() + " -> " + newProject + '\n';
+                    edited = true;
+                }
+                else if(selectedTimeEntry.getUsers() != newUser){
+                    msgString += selectedTimeEntry.getUsers() + " -> " + newUser + '\n';
+                    edited = true;
+                }
+                else if(selectedTimeEntry.getTimeUsed() != newTimeUsed){
+                    msgString += selectedTimeEntry.getTimeUsed() + " -> " + newTimeUsed + '\n';
+                    edited = true;
+                }
+                else if(!selectedTimeEntry.getDateAdded().equals(newDateAdded)){
+                    msgString += selectedTimeEntry.getDateAdded() + " -> " + newDateAdded + '\n';
+                    edited = true;
+                }
+                else if(!selectedTimeEntry.getDescription().equals(newDescription)){
+
+                    msgString += selectedTimeEntry.getDescription() + " -> " + newDescription + '\n';
+                    edited = true;
+                }
+                if(edited){
+                    int dialogResults = JOptionPane.showConfirmDialog(null, msgString);
+                    if(dialogResults == JOptionPane.YES_OPTION){
+                        DatabaseConnection.updateTimeEntry(updatedTimeEntry);
+                        clearTextFields();
+                        fillComboBoxes();
+                    }
+                }
+                else{
+                    JOptionPane.showMessageDialog(null,"Nothing is edited.");
+                }
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Nothing is selected for editing.");
+            }
         }
     }
 
     private class abortButton implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
-            System.out.println("ABORTING");
+            clearTextFields();
         }
     }
 
+    private void fillComboBoxes(){
+        timeEntryComboBox.removeAllItems();
+        projectInTimeEntryEditComboBox.removeAllItems();
+        userInTimeEntryEditComboBox.removeAllItems();
+        for (TimeEntry te: DatabaseConnection.getTimeEntryList()
+                ) {
+            timeEntryComboBox.addItem(te);
+        }
+
+        for (Project p: DatabaseConnection.getProjectList()
+             ) {
+            projectInTimeEntryEditComboBox.addItem(p);
+        }
+        for (Users u: DatabaseConnection.getUsersList()
+             ) {
+            userInTimeEntryEditComboBox.addItem(u);
+        }
+    }
+
+    private void clearTextFields(){
+        dateAddedTextField.setText("");
+        timeUsedTextField.setText("");
+        descriptionTextField.setText("");
+    }
 }

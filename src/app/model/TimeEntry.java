@@ -67,6 +67,16 @@ public class TimeEntry {
 
     @Override
     public String toString() {
-        return entryID + "|" + Project.getName() + ", '" + description + "' added: " + dateAdded + ", for " + timeUsed + ", By " + Users.getUserName();
+        String toStringDescriptionScring = "";
+        if(description.length() > 45){
+            String returnStringArray[] = description.split("");
+            for (String s: returnStringArray
+                 ) {
+                toStringDescriptionScring += s;
+            }
+        }else{
+            toStringDescriptionScring = description;
+        }
+        return entryID + "|" + Project.getName() + ", '" + toStringDescriptionScring + "' added: " + dateAdded + ", for " + timeUsed + ", By " + Users.getUserName();
     }
 }
