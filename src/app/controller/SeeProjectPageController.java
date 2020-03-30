@@ -3,8 +3,7 @@ package app.controller;
 import app.view.SeeProjectPage;
 import app.model.*;
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 
 public class SeeProjectPageController {
 
@@ -35,7 +34,7 @@ public class SeeProjectPageController {
 
     private void initListeners(){
         backBtn.addActionListener(new backButton());
-
+        projectJList.addMouseListener(new doubleClickList());
     }
 
     private class backButton implements ActionListener{
@@ -47,14 +46,29 @@ public class SeeProjectPageController {
         }
     }
 
+    private class doubleClickList extends MouseAdapter{
+        @Override
+        public void mouseClicked(MouseEvent e) {
+            if(e.getClickCount() == 2){
+                showInfoAboutClicked();
+            }
+        }
+    }
+
     private void fillProjectJList(){
         DefaultListModel listModel = new DefaultListModel();
         for (Project p: DatabaseConnection.getProjectList()
              ) {
-            listModel.addElement(p.toString());
+            listModel.addElement(p);
         }
         projectJList.setModel(listModel);
         updateSize();
+    }
+
+    private void showInfoAboutClicked(){
+        Object selectedObject = projectJList.getSelectedValue();
+        JOptionPane.showMessageDialog(null, ((Project) selectedObject).completeToString());
+
     }
 
     private void updateSize(){
